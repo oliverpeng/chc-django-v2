@@ -82,8 +82,10 @@ STATICFILES_FINDERS = (
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 'f!0vciv07951z%h%$efpes*5gc$pper=4y&6=p(80v0*cuc=30'
+try
+    from local_settings import *
+except ImportError:
+    pass
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -116,7 +118,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
