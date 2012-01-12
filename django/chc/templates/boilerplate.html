@@ -61,22 +61,21 @@
 
 {% block body %}
 <body>
+  <div id="wrapper">
 
-  {% block header %}
-  <header>
-    {% block navigation %}
-    <nav>
-
-    </nav>
+    {% block header %}
+    <header>
+      {% block navigation %}
+      <nav></nav>
+      {% endblock %}
+    </header>
     {% endblock %}
-  </header>
-  {% endblock %}
 
-
-
-  <div id="main" role="main">
-  {% block content %}
-  {% endblock %}
+    <div id="main" role="main">
+      {% block content %}
+      {% endblock %}
+      <div class="push"></div>
+    </div>
   </div>
 
   {% block footer %}
@@ -84,9 +83,7 @@
 
   </footer>
   {% endblock %}
-
-
-
+  
   {% block js %}
   {# JavaScript at the bottom for fast page loading #}
   {# Javascript files are all concatenacted and compressed #}
