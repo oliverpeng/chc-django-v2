@@ -95,6 +95,21 @@ sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: b
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
+/* =============================================================================
+   Web Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'NillandRegular';
+    src: url('/static/fonts/nilland/nilland.eot');
+    src: url('/static/fonts/nilland/nilland.eot?#iefix') format('embedded-opentype'),
+         url('/static/fonts/nilland/nilland.woff') format('woff'),
+         url('/static/fonts/nilland/nilland.ttf') format('truetype'),
+         url('/static/fonts/nilland/nilland.svg#NillandRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* =============================================================================
    Lists
