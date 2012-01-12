@@ -10,8 +10,8 @@ def join(request):
 def what_we_do(request):
 	return render(request, 'what-we-do.html')
 
-def where_we_are(request):
-	return render(request, 'where-we-are.html')
+def who_we_are(request):
+	return render(request, 'who-we-are.html')
 
 def churches(request):
 	return render(request, 'churches.html')
