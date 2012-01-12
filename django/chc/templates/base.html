@@ -1,0 +1,39 @@
+{% extends 'boilerplate.html' %}
+{# % load media % #}
+
+{% block title %}Churches Helping Churches{% endblock %}
+
+{% block analytics_id %}UA-XXXXX-X{% endblock %}
+
+{% comment %}
+{% block css %}{% include_media 'base.css' %}{% endblock %}
+{% endcomment %}
+{% block extra_css %}{% endblock %}
+{% block extra_js %}{% endblock %}
+
+{% block header %}
+<header>
+<h1>Site title</h1>
+</header>
+{% endblock %}
+
+{% block navigation %}
+<nav>
+<ul>
+	<li>{% block nav-join %}<a href="{% url join %}">Join</a>{% endblock %}</li>
+    <li>{% block nav-what-we-do %}<a href="{% url what-we-do %}">What We Do</a>{% endblock %}</li>
+    <li>{% block nav-where-we-are %}<a href="{% url where-we-are %}">Where We Are</a>{% endblock %}</li>
+    <li>{% block nav-churches %}<a href="{% url churches %}">The Churches</a>{% endblock %}</li>
+    <li><a href="/blog">Blog</a></li> {# Blog taken care of by Wordpress #}
+    <li>{% block nav-give %}<a href="{% url give %}">Give</a>{% endblock %}</li>
+</ul>
+</hav>
+{% endblock %}
+
+{% block footer %}
+<footer>
+<p>Site footer</p>
+</footer>
+{% endblock %}
+
+{% block content %}{% endblock %}
