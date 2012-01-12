@@ -36,7 +36,7 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 html, body { height: 100%; }
 
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: "Lucida Sans Unicode", sans-serif; color: #222; }
 
 /* 
  * Remove text-shadow in selection highlight: h5bp.com/i
@@ -230,13 +230,15 @@ td { vertical-align: top; }
 
 .container, #main { width: 950px; margin: 0 auto; }
 
-h2 { font-family: NillandRegular; font-size: 44px; }
+h1, h2, h3, h4, h5, h6 { font-family: NillandRegular; font-weight: normal; }
+h2 { font-size: 44px; }
+h3 { font-size: 18px; }
 
 header { background: url("/static/img/header-bg.gif") repeat-x scroll left top transparent; height: 97px; }
 #logo { float: left; margin-right: 35px; margin-top: 12px; }
 #logo a { background: url("/static/img/logo.png") no-repeat scroll left top transparent; display: block; width: 177px; height: 70px; }
 header nav li { float: left; }
-header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 30px; display: block; line-height: 97px; }
+header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 27px; display: block; line-height: 97px; }
 header nav strong { font-weight: normal; color: #898518; }
 header nav a, header nav a:visited { color: #000; }
 header nav a:hover { color: #737373; }
@@ -244,11 +246,13 @@ header nav a:hover { color: #737373; }
 #wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -228px; }
 footer, .push { height: 228px; }
 
-footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; }
 
 
-
-
+footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; color: #737373; }
+footer .container { position: relative; height: 228px; }
+footer .column { float: left; padding-top: 24px; }
+footer .column:first { width: 285px; }
+footer #copyright { position: absolute; bottom: 5px; right: 0; font-size: 11px; }
 
 
 
