@@ -17,7 +17,7 @@
 			<ul>
 			    <li>{% block nav-join %}<a href="{% url join %}">Join</a>{% endblock %}</li>
 			    <li>{% block nav-what-we-do %}<a href="{% url what-we-do %}">What We Do</a>{% endblock %}</li>
-			    <li>{% block nav-where-we-are %}<a href="{% url where-we-are %}">Where We Are</a>{% endblock %}</li>
+			    <li>{% block nav-who-we-are %}<a href="{% url who-we-are %}">Who We Are</a>{% endblock %}</li>
 			    <li>{% block nav-churches %}<a href="{% url churches %}">The Churches</a>{% endblock %}</li>
 			    <li><a href="/blog">Blog</a></li> {# Blog taken care of by Wordpress #}
 			    <li>{% block nav-give %}<a href="{% url give %}">Give</a>{% endblock %}</li>
@@ -43,12 +43,9 @@
 				<div class="org">Churches Helping Churches</div>
 				<div class="adr">
 					<div class="street-address">P.O. Box 6558</div>
-					<span class="locality">Elgin</span>
-					, 
-					<span class="region">IL</span>
-					, 
+					<span class="locality">Elgin</span>, 
+					<span class="region">IL</span><br>
 					<span class="postal-code">60121-6558</span>
-
 				</div>
 				<div class="tel">1-847-398-7024 ext. 3452</div>
 				<a class="email" href="mailto:information@churcheshelpingchurches.com">information@churcheshelpingchurches.com</a>
