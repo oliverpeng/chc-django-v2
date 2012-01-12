@@ -1,4 +1,4 @@
-{# % load media % #}<!doctype html>
+{# % load media % #}{% load static %}<!doctype html>
 {# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ #}
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -39,7 +39,7 @@
 
   {% block css %}
   {# CSS: implied media="all" #}
-  {# % include_media 'style.css' % #}
+  <link rel="stylesheet" href="{% get_static_prefix %}css/style.css">
   {% endblock %}
   {% block extra_css %}{% endblock %}
 
@@ -62,32 +62,29 @@
 {% block body %}
 <body>
 
-  {% block container %}
-  <div id="container">
-    {% block header %}
-    <header>
-
-    </header>
-    {% endblock %}
-
+  {% block header %}
+  <header>
     {% block navigation %}
     <nav>
 
     </nav>
     {% endblock %}
-
-    <div id="main" role="main">
-    {% block content %}
-    {% endblock %}
-    </div>
-
-    {% block footer %}
-    <footer>
-
-    </footer>
-    {% endblock %}
-  </div> {# end of #container #}
+  </header>
   {% endblock %}
+
+
+
+  <div id="main" role="main">
+  {% block content %}
+  {% endblock %}
+  </div>
+
+  {% block footer %}
+  <footer>
+
+  </footer>
+  {% endblock %}
+
 
 
   {% block js %}

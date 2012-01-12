@@ -50,9 +50,9 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #898518; text-decoration: none; }
+a:visited { color: #898518; }
+a:hover { color: #737373; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -208,13 +208,19 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Oliver Peng oliverpeng@gmail.com
    ========================================================================== */
 
+.container, #main { width: 950px; margin: 0 auto; }
 
-
-
-
+header { background: url(/static/img/header-bg.gif) top left repeat-x; height: 97px; }
+#logo { float: left; margin-right: 35px; }
+#logo a { background: url(/static/img/logo.png) top left no-repeat; display: block; width: 177px; height: 70px; }
+header nav li { float: left; }
+header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 30px; display: block; line-height: 97px; }
+header nav strong { font-weight: normal; color: #898518; }
+header nav a, header nav a:visited { color: #000; }
+header nav a:hover { color: #737373; }
 
 
 

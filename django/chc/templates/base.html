@@ -5,34 +5,36 @@
 
 {% block analytics_id %}UA-XXXXX-X{% endblock %}
 
-{% comment %}
-{% block css %}{% include_media 'base.css' %}{% endblock %}
-{% endcomment %}
 {% block extra_css %}{% endblock %}
 {% block extra_js %}{% endblock %}
 
 {% block header %}
 <header>
-<h1>Site title</h1>
-</header>
-{% endblock %}
+	<div class="container">
+		<h1 id="logo" class="ir"><a title="home" href="{% url home %}">Churches Helping Churches</a></h1>
 
-{% block navigation %}
-<nav>
-<ul>
-	<li>{% block nav-join %}<a href="{% url join %}">Join</a>{% endblock %}</li>
-    <li>{% block nav-what-we-do %}<a href="{% url what-we-do %}">What We Do</a>{% endblock %}</li>
-    <li>{% block nav-where-we-are %}<a href="{% url where-we-are %}">Where We Are</a>{% endblock %}</li>
-    <li>{% block nav-churches %}<a href="{% url churches %}">The Churches</a>{% endblock %}</li>
-    <li><a href="/blog">Blog</a></li> {# Blog taken care of by Wordpress #}
-    <li>{% block nav-give %}<a href="{% url give %}">Give</a>{% endblock %}</li>
-</ul>
-</hav>
+		{% block navigation %}
+		<nav>
+			<ul>
+			    <li>{% block nav-join %}<a href="{% url join %}">Join</a>{% endblock %}</li>
+			    <li>{% block nav-what-we-do %}<a href="{% url what-we-do %}">What We Do</a>{% endblock %}</li>
+			    <li>{% block nav-where-we-are %}<a href="{% url where-we-are %}">Where We Are</a>{% endblock %}</li>
+			    <li>{% block nav-churches %}<a href="{% url churches %}">The Churches</a>{% endblock %}</li>
+			    <li><a href="/blog">Blog</a></li> {# Blog taken care of by Wordpress #}
+			    <li>{% block nav-give %}<a href="{% url give %}">Give</a>{% endblock %}</li>
+			</ul>
+		</hav>
+		{% endblock %}
+
+	</div>
+</header>
 {% endblock %}
 
 {% block footer %}
 <footer>
-<p>Site footer</p>
+	<div class="container">
+		<p>Site footer</p>
+	</div>
 </footer>
 {% endblock %}
 
