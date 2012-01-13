@@ -231,8 +231,7 @@ td { vertical-align: top; }
 .container, #main { width: 950px; margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 { font-family: NillandRegular; font-weight: normal; }
-h2 { font-size: 44px; }
-h3 { font-size: 18px; }
+h2, h3 { font-size: 44px; }
 
 header { background: url("/static/img/header-bg.gif") repeat-x scroll left top transparent; height: 97px; }
 #logo { float: left; margin-right: 35px; margin-top: 12px; }
@@ -255,7 +254,7 @@ footer .column { float: left; padding-top: 24px; }
 footer .column:first { width: 285px; margin-left: 21px; }
 footer .column:nth-child(2) { width: 285px; margin-left: 25px; }
 footer .column:nth-child(3) { width: 310px; margin-left: 25px; }
-footer h3 { margin-bottom: 13px; }
+footer h4 { margin-bottom: 13px; font-size: 18px; }
 footer .org, footer .adr, footer .tel, footer .email { padding-left: 30px; }
 footer .org, footer .tel, footer .email { background: url(/static/img/footer-icons.png) no-repeat 3px 2px; }
 footer .tel { background-position: 3px -39px; }
