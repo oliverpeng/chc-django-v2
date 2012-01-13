@@ -115,7 +115,7 @@ sub { bottom: -0.25em; }
    Lists
    ========================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+ul, ol { margin: 1em 0; padding: 0 0 0 30px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
@@ -248,10 +248,30 @@ footer, .push { height: 228px; }
 
 
 
-footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; color: #737373; }
+footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; color: #737373; font-size: 12px; }
 footer .container { position: relative; height: 228px; }
 footer .column { float: left; padding-top: 24px; }
-footer .column:first { width: 285px; }
+footer .column:first { width: 285px; margin-left: 21px; }
+footer .column:nth-child(2) { width: 285px; margin-left: 25px; }
+footer .column:nth-child(3) { width: 310px; margin-left: 25px; }
+footer h3 { margin-bottom: 13px; }
+footer .org, footer .adr, footer .tel, footer .email { padding-left: 30px; }
+footer .org, footer .tel, footer .email { background: url(/static/img/footer-icons.png) no-repeat 3px 2px; }
+footer .tel { background-position: 3px -39px; }
+footer .email { background-position: 3px -59px; }
+footer .tel, footer .email { display: block; margin-top: 15px; }
+footer ul.founders { list-style: none; padding: 0; }
+footer ul.founders li { background: url(/static/img/footer-icons.png) no-repeat 3px -19px; padding-left: 30px; }
+footer ul.connect { padding: 0; list-style: none; }
+footer ul.connect li { float: left; margin-right: 9px;}
+footer ul.connect li a { display: block; width: 28px; height: 56px; background: url(/static/img/footer-icons.png) no-repeat 0 -83px; }
+footer ul.connect li:nth-child(2) a { background-position: -36px -83px; }
+footer ul.connect li:nth-child(3) a { background-position: -73px -83px; }
+footer ul.connect li:nth-child(1) a:hover { background-position: 0 -139px; }
+footer ul.connect li:nth-child(2) a:hover { background-position: -36px -139px; }
+footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
+
+
 footer #copyright { position: absolute; bottom: 5px; right: 0; font-size: 11px; }
 
 
