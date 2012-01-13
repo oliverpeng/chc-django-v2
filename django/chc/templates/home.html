@@ -9,27 +9,69 @@
 
 {% block content %}
 {% get_static_prefix as STATIC_PREFIX %}
-<h2 hidden>Home</h2>
+<section>
+	<h2 hidden>Home</h2>
 
-<article class="clearfix">
-	<div class="left">
-		<h3>We rebuild churches.<br>We are churches.</h3>
-		<a class="ir" href="{% url join %}">Will you join us?</a>
-	</div>
-	<div class="right">
-		<iframe width="542" height="304" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-	</div>
-</article>
+	<article class="clearfix">
+		<div class="left">
+			<h3>We rebuild churches.<br>We are churches.</h3>
+			<a class="ir" href="{% url join %}">Will you join us?</a>
+		</div>
+		<div class="right">
+			<iframe width="542" height="304" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</article>
 
-<aside class="featured-box">
-	<h3>More Than A Building</h3>
-</aside>
+	<aside class="featured-box">
+		<div class="constrain">
+			<img src="{{STATIC_PREFIX}}img/home/featured-1.jpg">
+			<hgroup>
+				<h3>More Than A Building</h3>
+				<h4>September 15, 2011</h4>
+			</hgroup>
+			<div class="featured-content">
+				<p>After 10 days of construction, our building prototype in Haiti is 70% complete...</p>
+			</div>
+		</div>
+		<div class="featured-link-wrapper">
+			<a class="featured-link">Read more</a>
+		</div>
+	</aside>
 
-<aside class="featured-box">
-	<h3>Pastor Ernst Joseph</h3>
-</aside>
+	<aside class="featured-box">
+		<div class="constrain">
+			<img src="{{STATIC_PREFIX}}img/home/featured-2.jpg">
+			<hgroup>
+				<h3>Pastor Ernst Joseph</h3>
+				<h4>Church of the Final Hour<br>Carrefour, Haiti</h4>
+			</hgroup>
+			<div class="featured-content">
+				<p>Pastor Ernst’s story goes like this, it was a cold rainy night when the earthquake hit his church...</p>
+			</div>
+		</div>
+		<div class="featured-link-wrapper">
+			<a class="featured-link">Read more</a>
+		</div>
+	</aside>
 
-<aside class="featured-box">
-	<h3>Photos, Videos &amp; More</h3>
-</aside>
+	<aside class="featured-box">
+		<div class="constrain">
+			<img src="{{STATIC_PREFIX}}img/home/featured-3.jpg">
+			<hgroup>
+				<h3>Photos, Videos &amp; More</h3>
+				<h4>Latest Media</h4>
+			</hgroup>
+			<div class="featured-content">
+				<ul class="square">
+					<li>Video: The Japan Mission</li>
+					<li>Photos: Haiti</li>
+					<li>Web and Print: Media Kit</li>
+				</ul>
+			</div>
+		</div>
+		<div class="featured-link-wrapper">
+			<a class="featured-link">View more</a>
+		</div>
+	</aside>
+</section>
 {% endblock %}

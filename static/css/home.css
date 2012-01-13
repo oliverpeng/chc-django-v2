@@ -10,4 +10,18 @@ article div.right { padding-bottom: 71px; background: url(/static/img/home/youtu
 article div.right iframe { border: 8px solid #f2f2f2; }
 
 
-.featured-box { width: 285px; height: 328px; position: relative; float: left; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); margin: 0 13px; }
+.featured-box { width: 263px; height: 306px; position: relative; float: left; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); margin: 0 12px; padding: 11px 12px; }
+.featured-box .constrain { max-height: 260px; overflow: hidden; }
+.featured-box img { border: 1px solid #ccc; }
+.featured-box h3 { font-size: 24px; margin-top: 5px; }
+.featured-box h4 { font-family: "Lucida Sans Unicode", sans-serif; font-size: 16px; color: #737373; margin: 15px 0 18px; }
+.featured-content { color: #737373; font-size: 12px; }
+.featured-link-wrapper { position: absolute; bottom: 11px; width: 263px; }
+.featured-link { display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; }
+.featured-link {
+	background: #f4f4f4;
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fa535a), color-stop(1, #eb1c24));
+ 	background-image: -moz-linear-gradient(center top, #fbfbfb 0%, #dddddd 100%);
+
+}
+.featured-link:hover { background: #ebebeb; color: #898518; }
