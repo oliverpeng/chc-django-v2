@@ -1,7 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Churches Helping Churches{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/home.css">
+{% endblock %}
+
 {% block content %}
-<h1>Home</h1>
+{% get_static_prefix as STATIC_PREFIX %}
+<h2 hidden>Home</h2>
+
+<article>
+	<div>
+		<h3>We rebuild churches<br>We are churches</h3>
+	</div>
+	<div>
+	</div>
+</article>
+
+<aside class="featured-box">
+	<h3>More Than A Building</h3>
+</aside>
+
+<aside class="featured-box">
+	<h3>Pastor Ernst Joseph</h3>
+</aside>
+
+<aside class="featured-box">
+	<h3>Photos, Videos &amp; More</h3>
+</aside>
 {% endblock %}
