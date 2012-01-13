@@ -1,4 +1,4 @@
-article { margin-top: 60px; margin-bottom: 16px; }
+article { margin-bottom: 16px; }
 article > div { float: left; }
 
 article div.left { width: 366px; }
