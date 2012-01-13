@@ -65,17 +65,15 @@
 
     {% block header %}
     <header>
-      {% block navigation %}
-      <nav></nav>
-      {% endblock %}
+      {% block navigation %}<nav></nav>{% endblock %}
     </header>
     {% endblock %}
 
-    <div id="main" role="main">
+    <div id="main" role="main" class="clearfix">
       {% block content %}
       {% endblock %}
-      <div class="push"></div>
     </div>
+    <div class="push"></div>
   </div>
 
   {% block footer %}
