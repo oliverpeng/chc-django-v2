@@ -270,13 +270,9 @@ footer ul.connect li:nth-child(3) a { background-position: -73px -83px; }
 footer ul.connect li:nth-child(1) a:hover { background-position: 0 -139px; }
 footer ul.connect li:nth-child(2) a:hover { background-position: -36px -139px; }
 footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
-
-
 footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; }
 
-
-
-
+.shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
