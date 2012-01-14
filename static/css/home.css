@@ -9,7 +9,6 @@ article div.left a { display: block; height: 109px; width: 299px; background: ur
 article div.left a:hover { background-position: 0 -109px; }
 
 article div.right { padding-bottom: 71px; background: url(/static/img/home/youtube-reflect.png) no-repeat left bottom; }
-article div.right iframe { border: 8px solid #f2f2f2; }
 
 .featured-box { width: 264px; height: 306px; position: relative; float: left; margin: 0 11px; padding: 11px 12px; }
 .featured-box .constrain { max-height: 260px; overflow: hidden; }
@@ -18,11 +17,3 @@ article div.right iframe { border: 8px solid #f2f2f2; }
 .featured-box h4 { font-family: "Lucida Sans Unicode", sans-serif; font-size: 16px; color: #737373; margin: 15px 0 18px; }
 .featured-content { color: #737373; font-size: 12px; }
 .featured-link-wrapper { position: absolute; bottom: 11px; width: 263px; }
-.featured-link { display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; }
-.featured-link {
-	background: #f4f4f4;
-  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfb), color-stop(1, #dddddd));
- 	background-image: -moz-linear-gradient(center top, #fbfbfb 0%, #dddddd 100%);
-
-}
-.featured-link:hover { background: #ebebeb; color: #898518; }
