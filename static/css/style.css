@@ -247,7 +247,7 @@ header nav a:hover { color: #737373; }
 #wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -228px; }
 footer, .push { height: 228px; }
 
-#main { padding-bottom: 42px; padding-top: 60px; }
+#main { padding-bottom: 42px; padding-top: 25px; }
 
 
 footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; color: #737373; font-size: 12px; }

@@ -1,3 +1,5 @@
+#main { padding-top: 60px; }
+
 article { margin-bottom: 16px; }
 article > div { float: left; }
 
@@ -20,7 +22,7 @@ article div.right iframe { border: 8px solid #f2f2f2; }
 .featured-link { display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; }
 .featured-link {
 	background: #f4f4f4;
-  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fa535a), color-stop(1, #eb1c24));
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfb), color-stop(1, #dddddd));
  	background-image: -moz-linear-gradient(center top, #fbfbfb 0%, #dddddd 100%);
 
 }
