@@ -1,9 +1,56 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Churches Helping Churches - Join{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/join.css">
+{% endblock %}
 
 {% block nav-join %}<strong>Join</strong>{% endblock %}
 
 {% block content %}
-<h1>Join</h1>
+<section class="clearfix">
+	<hgroup>
+		<h2>Sign Up</h2>
+		<h3>Everything you need to know...</h3>
+	</hgroup>
+
+	<article class="shadow">
+		<h3>For Pastors</h3>
+		<div class="youtube">
+			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<a class="btn-link big">Sign up now</a>
+		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
+	</article>
+	
+	<article class="shadow last">
+		<h3>For Individuals</h3>
+		<div class="youtube">
+			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<a class="btn-link big">Sign up now</a>
+		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
+	</article>
+</section>
+
+<section id="moreways">
+	<h2>More Ways To Get Involved</h2>
+	<div class="shadow clearfix">
+		<article>
+			<h3>Pray Online</h3>
+		</article>
+		<article>
+			<h3>Send Prayer Book</h3>
+		</article>
+		<article>
+			<h3>Experience CHC Live</h3>
+		</article>
+		<article>
+			<h3>Partner with a Church</h3>
+		</article>
+	</div>
+</section>
+
 {% endblock %}

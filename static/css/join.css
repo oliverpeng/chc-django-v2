@@ -1,0 +1,14 @@
+hgroup { margin-bottom: 30px; }
+h2, h3 { text-align: center; }
+h3 { font-size: 35px; }
+
+article { width: 436px; padding: 15px; float: left; margin-right: 16px; }
+article.last { margin: 0; }
+article h3 { font-size: 24px; }
+article .youtube { height: 306px; background: url(/static/img/join/youtube-reflect.png) no-repeat bottom left; margin-top: 10px; }
+article p { text-align: center; font-size: 16px; margin-top: 15px; }
+
+#moreways h2 { text-align: left; font-size: 24px; margin: 36px 0 10px; }
+#moreways article { width: 216px; margin: 0; border-right: 1px solid #ebebeb; padding: 10px; height: 150px; }
+#moreways article:last-child { border: none; }
+#moreways h3 { font-size: 16px; font-family: "Lucida Sans Unicode"; }
