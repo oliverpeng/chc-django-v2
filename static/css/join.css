@@ -1,24 +1,37 @@
-hgroup { margin-bottom: 30px; }
-h2, h3 { text-align: center; }
-h3 { font-size: 35px; }
+#signup hgroup { margin-bottom: 30px; }
+#signup h2, #signup h3 { text-align: center; }
+#signup h3 { font-size: 35px; }
 
-article { width: 436px; padding: 15px; float: left; margin-right: 16px; }
-article.last { margin: 0; }
-article h3 { font-size: 24px; }
-article .youtube { height: 306px; background: url(/static/img/join/youtube-reflect.png) no-repeat bottom left; margin-top: 10px; }
-article p { text-align: center; font-size: 16px; margin-top: 15px; }
+#signup article { width: 436px; padding: 15px; float: left; margin-right: 16px; }
+#signup article:last-child { margin: 0; }
+#signup article h3 { font-size: 24px; }
+#signup article .youtube { height: 306px; background: url(/static/img/join/youtube-reflect.png) no-repeat bottom left; margin-top: 10px; }
+#signup article p { text-align: center; font-size: 16px; margin-top: 15px; }
 
-#moreways h2 { text-align: left; font-size: 24px; margin: 36px 0 10px; }
-#moreways article { width: 216px; margin: 0; border-right: 1px solid #ebebeb; padding: 10px; height: 150px; cursor: pointer; }
-#moreways article:last-child { border: none; width: 219px; }
-#moreways article:hover {
+#moreways h2 { font-size: 24px; margin: 36px 0 10px; }
+#moreways #bar article { width: 216px; margin: 0; border-right: 1px solid #ebebeb; padding: 10px; height: 150px; cursor: pointer; float: left; }
+#moreways #bar article:last-child { border: none; width: 219px; }
+#moreways #bar article:hover {
 	background: #f4f4f4;
  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(0.7, #fff));
  	background-image: -moz-linear-gradient(center top, #eee 0%, #fff 70%);
  }
-#moreways img { border: 1px solid #c2c7c8; }
-#moreways h3 { text-align: left; font-size: 16px; font-family: "Lucida Sans Unicode"; margin-top: 8px; }
-#moreways p { font-size: 12px; margin-top: 5px; text-align: left; }
+#moreways #bar img { border: 1px solid #c2c7c8; }
+#moreways #bar h3 { font-size: 16px; font-family: "Lucida Sans Unicode"; margin-top: 8px; }
+#moreways #bar p { font-size: 12px; margin-top: 5px; }
 
 .evenmore { float: left; width: 260px; height: 155px; padding: 15px 15px 15px 20px; margin-right: 32px; margin-top: 34px; }
 .evenmore:last-child { margin-right: 0; }
+.evenmore h3 { font-size: 24px; }
+.evenmore h4 { font-size: 16px; font-family: "Lucida Sans Unicode"; }
+.evenmore ul { font-size: 12px; margin: 10px 0; list-style: none; }
+
+.evenmore ul.spread, .evenmore ul.connect { padding-left: 12px; }
+.evenmore ul a, .evenmore .updates { display: block; height: 27px; padding-left: 40px; color: #737373; background: url(/static/img/join/icons.gif) no-repeat 0 0; line-height: 27px; margin-bottom: 8px; }
+.evenmore ul a.twitter { background-position: 0 -36px; }
+.evenmore ul a.download { background-position: 0 -72px; }
+
+.evenmore .RSS a { background-position: 0 -144px; }
+.evenmore .updates { background-position: 0 -108px; }
+.evenmore .updates input[type=text] { margin-top: 6px; width: 130px; }
+.evenmore .updates .btn-link { display: inline-block; padding: 4px 0 5px; width: 50px; font-size: 14px; }

@@ -14,7 +14,7 @@
 
 {% block content %}
 {% get_static_prefix as STATIC_PREFIX %}
-<section class="clearfix">
+<section id="signup" class="clearfix">
 	<hgroup>
 		<h2>Sign Up</h2>
 		<h3>Everything you need to know...</h3>
@@ -29,7 +29,7 @@
 		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
 	</article>
 	
-	<article class="shadow last">
+	<article class="shadow">
 		<h3>For Individuals</h3>
 		<div class="youtube">
 			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -41,7 +41,7 @@
 
 <section id="moreways">
 	<h2>More Ways To Get Involved</h2>
-	<div class="shadow clearfix">
+	<div id="bar" class="shadow clearfix">
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/pray-online.jpg">
 			<h3><a href="{% url pray %}">Pray Online</a></h3>
@@ -63,10 +63,43 @@
 			<p>For churches who want to go deeper, enter in a long-term relationship with a church in crisis.</p>
 		</article>
 	</div>
+
+	<article class="evenmore shadow">
+		<hgroup>
+			<h3>Volunteer</h3>
+			<h4>Want to join the CHC team?</h4>
+		</hgroup>
+		<p>Volunteer opportunities are currently available for:</p>
+		<ul class="square">
+			<li>Professional Photography/Videography</li>
+		</ul>
+		<p>
+			Please contact:<br>
+			<a href="mailto:dshin@churcheshelpingchurches.com">dshin@churcheshelpingchurches.com</a>
+		</p>
+	</article>
+	<article class="evenmore shadow">
+		<h3>Spread the News</h3>
+		<ul class="spread">
+			<li><a class="fb" title="Facebook" href="https://www.facebook.com/ChurchesHelpingChurches" target="_blank">Like Us</a></li>
+			<li><a class="twitter" title="Twitter" href="http://twitter.com/churcheshelping" target="_blank">Follow Us</a></li>
+			<li><a class="download" href="">Download CHC Media</a></li>
+		</ul>
+	</article>
+	<article class="evenmore shadow">
+		<h3>Stay Connected</h3>
+		<ul class="connect">
+			<li class="RSS"><a href="">Subscribe to RSS feed</a></li>
+			<li class="updates">
+				<label for="email">Receive Updates</label><br>
+				<input type="text" placeholder="Email Address"></input>
+				<input type="submit" value="Send" class="btn-link"></input>
+			</li>
+		</ul>
+
+	</article>
 </section>
 
-<article class="evenmore shadow"></article>
-<article class="evenmore shadow"></article>
-<article class="evenmore shadow"></article>
+
 
 {% endblock %}

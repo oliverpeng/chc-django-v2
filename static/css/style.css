@@ -274,7 +274,7 @@ footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
 footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; }
 
 
-.btn-link { font-family: NillandRegular; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; }
+.btn-link { font-family: NillandRegular; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; color: #898518; }
 .btn-link {
   background: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfb), color-stop(1, #dddddd));
