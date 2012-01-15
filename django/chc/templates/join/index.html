@@ -6,6 +6,9 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% get_static_prefix %}css/join.css">
 {% endblock %}
+{% block extra_js %}
+<script src="{% get_static_prefix %}js/join.js"></script>
+{% endblock %}
 
 {% block nav-join %}<strong>Join</strong>{% endblock %}
 
@@ -41,25 +44,29 @@
 	<div class="shadow clearfix">
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/pray-online.jpg">
-			<h3><a>Pray Online</a></h3>
+			<h3><a href="{% url pray %}">Pray Online</a></h3>
 			<p>Write your prayer on our global map of prayers for churches in crisis.</p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/prayer-book.jpg">
-			<h3><a>Send Prayer Book</a></h3>
+			<h3><a href="{% url sendprayer %}">Send Prayer Book</a></h3>
 			<p>Create a custom prayer book to encourage a pastor. </p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/chc-live.jpg">
-			<h3><a>Experience CHC Live</a></h3>
+			<h3><a href="{% url chclive %}">Experience CHC Live</a></h3>
 			<p>Invite CHC to your church for a presentation that will challenge the community of believers.</p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/partner-church.jpg">
-			<h3><a>Partner with a Church</a></h3>
+			<h3><a href="{% url partner %}">Partner with a Church</a></h3>
 			<p>For churches who want to go deeper, enter in a long-term relationship with a church in crisis.</p>
 		</article>
 	</div>
 </section>
+
+<article class="evenmore shadow"></article>
+<article class="evenmore shadow"></article>
+<article class="evenmore shadow"></article>
 
 {% endblock %}

@@ -5,7 +5,7 @@ def home(request):
 	return render(request, 'home.html')
 
 def join(request):
-	return render(request, 'join.html')
+	return render(request, 'join/index.html')
 
 def what_we_do(request):
 	return render(request, 'what-we-do.html')
