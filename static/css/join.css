@@ -9,6 +9,8 @@ article .youtube { height: 306px; background: url(/static/img/join/youtube-refle
 article p { text-align: center; font-size: 16px; margin-top: 15px; }
 
 #moreways h2 { text-align: left; font-size: 24px; margin: 36px 0 10px; }
-#moreways article { width: 216px; margin: 0; border-right: 1px solid #ebebeb; padding: 10px; height: 150px; }
+#moreways article { width: 216px; margin: 0; border-right: 1px solid #ebebeb; padding: 10px; height: 150px; cursor: pointer; }
 #moreways article:last-child { border: none; }
-#moreways h3 { font-size: 16px; font-family: "Lucida Sans Unicode"; }
+#moreways img { border: 1px solid #c2c7c8; }
+#moreways h3 { text-align: left; font-size: 16px; font-family: "Lucida Sans Unicode"; margin-top: 8px; }
+#moreways p { font-size: 12px; margin-top: 5px; text-align: left; }

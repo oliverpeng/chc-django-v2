@@ -10,6 +10,7 @@
 {% block nav-join %}<strong>Join</strong>{% endblock %}
 
 {% block content %}
+{% get_static_prefix as STATIC_PREFIX %}
 <section class="clearfix">
 	<hgroup>
 		<h2>Sign Up</h2>
@@ -39,16 +40,24 @@
 	<h2>More Ways To Get Involved</h2>
 	<div class="shadow clearfix">
 		<article>
-			<h3>Pray Online</h3>
+			<img src="{{STATIC_PREFIX}}img/join/pray-online.jpg">
+			<h3><a>Pray Online</a></h3>
+			<p>Write your prayer on our global map of prayers for churches in crisis.</p>
 		</article>
 		<article>
-			<h3>Send Prayer Book</h3>
+			<img src="{{STATIC_PREFIX}}img/join/prayer-book.jpg">
+			<h3><a>Send Prayer Book</a></h3>
+			<p>Create a custom prayer book to encourage a pastor. </p>
 		</article>
 		<article>
-			<h3>Experience CHC Live</h3>
+			<img src="{{STATIC_PREFIX}}img/join/chc-live.jpg">
+			<h3><a>Experience CHC Live</a></h3>
+			<p>Invite CHC to your church for a presentation that will challenge the community of believers.</p>
 		</article>
 		<article>
-			<h3>Partner with a Church</h3>
+			<img src="{{STATIC_PREFIX}}img/join/partner-church.jpg">
+			<h3><a>Partner with a Church</a></h3>
+			<p>For churches who want to go deeper, enter in a long-term relationship with a church in crisis.</p>
 		</article>
 	</div>
 </section>
