@@ -241,9 +241,9 @@ header { background: url("/static/img/header-bg.gif") repeat-x scroll left top t
 #logo a { background: url("/static/img/logo.png") no-repeat scroll left top transparent; display: block; width: 177px; height: 70px; }
 header nav li { float: left; }
 header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 27px; display: block; line-height: 97px; }
-header nav strong { font-weight: normal; color: #898518; }
 header nav a, header nav a:visited { color: #000; }
 header nav a:hover { color: #737373; }
+header nav strong, header nav a.active { font-weight: normal; color: #898518; }
 
 #wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -228px; }
 footer, .push { height: 228px; }

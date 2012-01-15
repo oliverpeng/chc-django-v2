@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Churches Helping Churches - Send Prayer Book{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/join.css">
+{% endblock %}
+
+{% block nav-join %}<a class="active" href="{% url join %}">Join</a>{% endblock %}
+
+{% block content %}
+{% get_static_prefix as STATIC_PREFIX %}
+<h2>Send Prayer Book</h2>
+
+{% endblock %}

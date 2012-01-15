@@ -7,6 +7,18 @@ def home(request):
 def join(request):
 	return render(request, 'join/index.html')
 
+def pray(request):
+	return render(request, 'join/pray.html')
+
+def sendprayer(request):
+	return render(request, 'join/sendprayer.html')
+
+def chclive(request):
+	return render(request, 'join/chclive.html')
+
+def partner(request):
+	return render(request, 'join/partner.html')
+
 def what_we_do(request):
 	return render(request, 'what-we-do.html')
 
