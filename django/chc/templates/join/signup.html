@@ -20,68 +20,72 @@
 	<h3>Please fill out your information.</h3>
 	<div class="clearfix">
 		<div class="fieldWrapper lcol">
-			<label for="id_fname">First Name</label>
+			{{ form.fname.label_tag }}
 			{{ form.fname }}
 			{{ form.fname.errors }}
 		</div>
 		<div class="fieldWrapper rcol">
-			<label for="id_lname">Last Name</label>
+			{{ form.lname.label_tag }}
 			{{ form.lname }}
 			{{ form.lname.errors }}
 		</div>
 	</div>
 	<div class="fieldWrapper">
-		<label for="id_city">City</label>
+		{{ form.city.label_tag }}
 		{{ form.city }}
 		{{ form.city.errors }}
 	</div>
 	<div class="clearfix">
 		<div class="fieldWrapper state lcol">
-			<label for="id_state">State / Province</label>
+			{{ form.state.label_tag }}
 			{{ form.state }}
 			{{ form.state.errors }}
 		</div>
 		<div class="fieldWrapper country rcol">
-			<label for="id_country">Country</label>
+			{{ form.country.label_tag }}
 			{{ form.country }}
 			{{ form.country.errors }}
 		</div>
 	</div>
 	<div class="clearfix">
 		<div class="fieldWrapper email lcol">
-			<label for="id_email">Email Address</label>
+			{{ form.email.label_tag }}
 			{{ form.email }}
 			{{ form.email.errors }}
 		</div>
 		<div class="fieldWrapper phone rcol">
-			<label for="id_phone">Phone</label>
+			{{ form.phone.label_tag }}
 			{{ form.phone }}
 			{{ form.phone.errors }}
 		</div>
 	</div>
 	<div class="fieldWrapper">
-		<label for="id_church_name">Church Name</label>
+		{{ form.church_name.label_tag }}
 		{{ form.church_name }}
 		{{ form.church_name.errors }}
 	</div>
 	<div class="fieldWrapper checkbox">
-		{{ form.is_pastor }} <label for="id_is_pastor">Check here if you are a pastor.</label>		
+		{{ form.is_pastor }} {{ form.is_pastor.label_tag }}
+		{{ form.is_pastor.errors }}
 	</div>
 	<div class="fieldWrapper">
-		<label for="id_church_website">Church Website</label>
+		{{ form.church_website.label_tag }}
 		{{ form.church_website }}
 		{{ form.church_website.errors }}
 	</div>
 
 	<h3 class="second">Please select one or more of the following responses:</h3>
 	<div class="fieldWrapper checkbox">
-		{{ form.take_offering }}<label for="id_take_offering">I’m on board. Our church will take an offering at the next crisis.</label>
+		{{ form.take_offering }} {{ form.take_offering.label_tag }}
+		{{ form.take_offering.errors }}
 	</div>
 	<div class="fieldWrapper checkbox">
-		{{ form.contact_me }}<label for="id_contact_me">I am interested. Please contact me.</label><br>
+		{{ form.contact_me }} {{ form.contact_me.label_tag }}
+		{{ form.contact_me.errors }}
 	</div>
 	<div class="fieldWrapper checkbox">
-		{{ form.receive_updates }}<label for="id_receive_updates">I would like to receive updates.</label>
+		{{ form.receive_updates }} {{ form.receive_updates.label_tag }}
+		{{ form.receive_updates.errors }}
 	</div>
     <p><input type="submit" class="btn-link" value="Sign Up" /></p>
 </form>

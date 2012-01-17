@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Churches Helping Churches - Thank You{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/join/thankyou.css">
+{% endblock %}
+
+{% block nav-join %}<a class="active" href="{% url join %}">Join</a>{% endblock %}
+
+{% block content %}
+{% get_static_prefix as STATIC_PREFIX %}
+<h2>Thank you<br>for joining Churches Helping Churches!</h2>
+
+
+{% endblock %}
