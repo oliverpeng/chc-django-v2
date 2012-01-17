@@ -11,3 +11,7 @@ DATABASES = {
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'CHANGEME_****************************'
+
+# Mail Chimp related
+MC_API_KEY = 'REPLACE ME'
+MC_LIST_ID = 'REPLACE ME'
