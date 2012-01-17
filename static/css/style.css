@@ -115,7 +115,7 @@ sub { bottom: -0.25em; }
    Lists
    ========================================================================== */
 
-ul, ol { padding: 0 0 0 30px; }
+ul, ol { padding: 0; list-style: none; }
 ul.square, ol.square { list-style: none; padding: 0; }
 ul.square li, ol.square li { background: url(/static/img/footer-icons.png) no-repeat 3px -19px; padding-left: 30px; }
 dd { margin: 0 0 0 40px; }
@@ -154,9 +154,10 @@ figure { margin: 0; }
 
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
+.errorlist { color: red; font-size: 12px; }
 
 /* Indicate that 'label' will shift focus to the associated form element */
-label { cursor: pointer; }
+label { cursor: pointer; font-size: 14px; }
 
 /* 
  * 1. Correct color not inheriting in IE6/7/8/9 

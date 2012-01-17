@@ -25,7 +25,7 @@
 		<div class="youtube">
 			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<a class="btn-link big">Sign up now</a>
+		<a class="btn-link big" href="{% url signup %}">Sign up now</a>
 		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
 	</article>
 	
@@ -34,7 +34,7 @@
 		<div class="youtube">
 			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<a class="btn-link big">Sign up now</a>
+		<a class="btn-link big" href="{% url signup %}">Sign up now</a>
 		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
 	</article>
 </section>
@@ -92,7 +92,7 @@
 			<li class="RSS"><a href="">Subscribe to RSS feed</a></li>
 			<li class="updates">
 				<label for="email">Receive Updates</label><br>
-				<input type="text" placeholder="Email Address"></input>
+				<input type="text" id="email" placeholder="Email Address"></input>
 				<input type="submit" value="Send" class="btn-link"></input>
 			</li>
 		</ul>

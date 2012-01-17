@@ -1,0 +1,18 @@
+h3 { font-size: 24px; margin-top: 25px; }
+h3.second { margin-top: 35px; }
+
+label { display: block; }
+input[type=text] { width: 100%; }
+.fieldWrapper { clear: both; margin-top: 15px; width: 460px; }
+.fieldWrapper.lcol, .fieldWrapper.rcol { width: 220px; float: left; }
+.fieldWrapper.rcol { clear: none; margin-left: 20px; }
+
+.fieldWrapper.state { width: 200px; }
+.fieldWrapper.country { width: 240px; }
+
+.fieldWrapper.email { width: 240px; }
+.fieldWrapper.phone { width: 200px; }
+
+.checkbox label { display: inline; margin-left: 9px; }
+
+.btn-link { margin: 15px 0; width: 160px; }
