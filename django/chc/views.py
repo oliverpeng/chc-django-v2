@@ -1,11 +1,12 @@
+from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django import forms
 
 class SignupForm(forms.Form):
-	fname = forms.CharField(required=False, label='First Name')
-	lname = forms.CharField(required=False, label='Last Name')
+	fname = forms.CharField(label='First Name')
+	lname = forms.CharField(label='Last Name')
 	city = forms.CharField(required=False, label="City")
 	state = forms.CharField(required=False, label="State / Province")
 	country = forms.CharField(required=False, label = "Country")
@@ -18,6 +19,80 @@ class SignupForm(forms.Form):
 	contact_me = forms.BooleanField(required=False, label="I am interested. Please contact me.")
 	receive_updates = forms.BooleanField(required=False, label="I would like to receive updates.")
 
+class MailChimpException(Exception):
+	def __init__(self, err_code, message):
+		Exception.__init__(self, message)
+		self.err_code = err_code
+
+def mailchimp_subscribe(form):
+	""" Subscribe to MailChimp newsletter
+
+	"""
+	import urllib
+	import urllib2
+	import json
+	import settings
+
+	fname = form.cleaned_data['fname']
+	lname = form.cleaned_data['lname']
+	city = form.cleaned_data['city']
+	state = form.cleaned_data['state']
+	country = form.cleaned_data['country']
+	email = form.cleaned_data['email']
+	is_pastor = form.cleaned_data['is_pastor']
+	phone = form.cleaned_data['phone']
+	church_name = form.cleaned_data['church_name']
+	church_website = form.cleaned_data['church_website']
+	take_offering = form.cleaned_data['take_offering']
+	contact_me = form.cleaned_data['contact_me']
+	receive_updates = form.cleaned_data['receive_updates']
+
+	url = 'http://us1.api.mailchimp.com/1.3/'
+	method = 'listSubscribe'
+	merge_vars = {
+		'FNAME': fname,
+		'LNAME': lname,
+		'CITY': city,
+		'STATE': state,
+		'COUNTRY': country,
+		'PHONE': phone,
+		'CHURCH': church_name,
+		'WEBSITE': church_website,
+	}
+	if is_pastor:
+		merge_vars['PASTOR'] = 1;
+	if take_offering:
+		merge_vars['GIVE'] = 1;
+	if contact_me:
+		merge_vars['CONTACT_ME'] = 1;
+	if receive_updates:
+		merge_vars['READER'] = 1;
+
+	params = {
+		'apikey': settings.MC_API_KEY,
+		'id': settings.MC_LIST_ID,
+		'email_address': email,
+		'merge_vars': merge_vars
+	}
+
+	urlencoded_json = urllib.quote( json.dumps(params) );
+	response = urllib2.urlopen("%s?method=%s" %(url, method), urlencoded_json)
+	data = response.read()
+	response.close()
+	result = json.loads(data)
+
+	try:
+		if 'error' in result:
+			raise MailChimpException(result['code'], result['error'])
+	except TypeError:
+		# thrown when results is not iterable (eg bool)
+		pass
+
+	return result
+
+# =============================================================================
+#  Views
+# =============================================================================
 
 def home(request):
 	return render(request, 'home.html')
@@ -27,67 +102,57 @@ def join(request):
 
 def signup(request):
 	from django.core.context_processors import csrf
+	error_msgs = []
 
 	if request.method == 'POST':
 		form = SignupForm(request.POST)
 		if form.is_valid():
-			fname = form.cleaned_data['fname']
-			lname = form.cleaned_data['lname']
-			city = form.cleaned_data['city']
-			state = form.cleaned_data['state']
-			country = form.cleaned_data['country']
-			email = form.cleaned_data['email']
-			is_pastor = form.cleaned_data['is_pastor']
-			phone = form.cleaned_data['phone']
-			church_name = form.cleaned_data['church_name']
-			church_website = form.cleaned_data['church_website']
-			take_offering = form.cleaned_data['take_offering']
-			contact_me = form.cleaned_data['contact_me']
-			receive_updates = form.cleaned_data['receive_updates']
-			
-			#if is_pastor:
-			#	from django.core.mail import send_mail
-			#	message = ""
-			#	send_mail("Pastor signed up", message, sender, recipients)
+			try:
+				mailchimp_subscribe(form)
+				is_pastor = form.cleaned_data['is_pastor']
+				contact_me = form.cleaned_data['contact_me']
 
-			import urllib
-			import urllib2
-			import json
+				if is_pastor:
+					pass
+				#	from django.core.mail import send_mail
+				#	message = ""
+				#	send_mail("Pastor signed up", message, sender, recipients)
+				return HttpResponseRedirect( reverse('thanks') )
+			except MailChimpException as e:
+				if e.err_code == 214: # User already subscribed
+					request.session['signup.is_duplicate'] = True
+					request.session['signup.email'] = form.cleaned_data['email']
 
-			url = 'http://us1.api.mailchimp.com/1.3/'
-			method = 'listSubscribe'    	
-			params = {
-				'apikey': '420524bc6e7e2495ddd87a95dd48a3dd-us1',
-				'id': '9b182b13d8',
-				'email_address': email,
-				'merge_vars': {
-					'FNAME': fname,
-					'LNAME': lname,
-					'CITY': city,
-					'STATE': state,
-					'CHURCH': church_name,
-					'WEBSITE': church_website
-				}
-			}
-			
-			urlencoded_json = urllib.quote( json.dumps(params) );
-			response = urllib2.urlopen("%s?method=%s" %(url, method), urlencoded_json)
-			data = response.read()
-			response.close()
-			result = json.loads(data)
-			raise Exception
-
-			return HttpResponseRedirect( reverse('thanks') )
+					import re
+					match = re.search(r'href=[\'"]?([^\'" >]+)', e.message)
+					href = match.group(1) if match else ''
+					request.session['signup.mailchimp_link'] = href
+					
+					return HttpResponseRedirect( reverse('thanks') )
+				else:
+					error_msgs.append("Oops! It looks like an error occurred. Please try again!")
 		else:
 			pass
 	else:
 		form = SignupForm()
 
-	c = { 'form': form}
+	c = { 'form': form, 'error_msgs': error_msgs }
 	return render_to_response('join/signup.html', c, context_instance=RequestContext(request))
 
 def thanks(request):
-	return render(request, 'join/thanks.html')
+	c = {}
+	c['is_duplicate'] = request.session.get('signup.is_duplicate', False)
+	c['email'] = request.session.get('signup.email', 'your email')
+	c['mailchimp_link'] = request.session.get('signup.mailchimp_link', '')
+
+	try:
+		del request.session['signup.is_duplicate']
+		del request.session['signup.email']
+		del request.session['signup.mailchimp_link']
+	except KeyError:
+		pass
+
+	return render(request, 'join/thanks.html', c)
 
 def pray(request):
 	return render(request, 'join/pray.html')

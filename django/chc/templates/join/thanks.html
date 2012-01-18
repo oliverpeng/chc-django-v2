@@ -14,12 +14,28 @@
 <article>
 	<h2>Thank you<br>for joining Churches Helping Churches!</h2>
 
+	{% if is_duplicate %}
+	<p class="main warn">
+		It looks like {{ email }} has already been subscribed to our list!
+		{% if mailchimp_link %}
+		Update your account info and preferences by <a target="_blank" href="{{ mailchimp_link }}">clicking here</a>.
+		{% endif %}
+	</p>
+	{% endif %}
+
 	<p class="main">As a global fellowship of churches, we are committed to taking up a one-time offering at the next crisis we engage to help the churches in that area.  Please continue to stay connected by receiving our e-mail newsletter or visit our <a href="/blog">blog</a> for updates.</p>
 
 	<p class="main">For other ways to get involved, please see the following options.</p>
 
 	<aside class="shadow">
 		<h3>Ways to Get Involved</h3>
+		<ul class="get-involved">
+			<li><a class="btn-link">Give</a></li>
+			<li><a class="btn-link">Experience CHC Live</a></li>
+			<li><a class="btn-link">Partner with a Church</a></li>
+			<li><a class="btn-link">Send Prayer Book</a></li>
+			<li><a class="btn-link">Pray Online</a></li>
+		</ul>
 	</aside>
 	<aside class="shadow">
 		<hgroup>

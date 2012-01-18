@@ -13,19 +13,28 @@
 {% get_static_prefix as STATIC_PREFIX %}
 <h2>Sign Up</h2>
 
+{% if error_msgs %}
+<ul class="error">
+	{% for err in error_msgs %}
+	<li>{{ err }}</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
 <form method="post">
 	{% csrf_token %}
 	{{ form.non_field_errors }}
 
 	<h3>Please fill out your information.</h3>
+	<span class="highlight">* indicates required field</span>
 	<div class="clearfix">
 		<div class="fieldWrapper lcol">
-			{{ form.fname.label_tag }}
+			<label for="id_fname">First Name <span class="highlight">*</span></label>
 			{{ form.fname }}
 			{{ form.fname.errors }}
 		</div>
 		<div class="fieldWrapper rcol">
-			{{ form.lname.label_tag }}
+			<label for="id_lname">Last Name <span class="highlight">*</span></label>
 			{{ form.lname }}
 			{{ form.lname.errors }}
 		</div>
@@ -49,7 +58,7 @@
 	</div>
 	<div class="clearfix">
 		<div class="fieldWrapper email lcol">
-			{{ form.email.label_tag }}
+			<label for="id_email">Email Address <span class="highlight">*</span></label>
 			{{ form.email }}
 			{{ form.email.errors }}
 		</div>
