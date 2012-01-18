@@ -49,6 +49,21 @@ def mailchimp_subscribe(form):
 
 	url = 'http://us1.api.mailchimp.com/1.3/'
 	method = 'listSubscribe'
+
+	groupings = []
+	groups_705 = []
+	if is_pastor:
+		groupings.append({'id': 707, 'groups': 'Yes'})
+	
+	if take_offering:
+		groups_705.append('Our church will take an offering at the next crisis.')
+	if contact_me:
+		groups_705.append('Please contact me.')
+	if receive_updates:
+		groups_705.append('Subscribe to newsletter.')
+	
+	groupings.append({'id': 705, 'groups': ','.join(groups_705)})
+
 	merge_vars = {
 		'FNAME': fname,
 		'LNAME': lname,
@@ -58,15 +73,8 @@ def mailchimp_subscribe(form):
 		'PHONE': phone,
 		'CHURCH': church_name,
 		'WEBSITE': church_website,
+		'GROUPINGS': groupings
 	}
-	if is_pastor:
-		merge_vars['PASTOR'] = 1;
-	if take_offering:
-		merge_vars['GIVE'] = 1;
-	if contact_me:
-		merge_vars['CONTACT_ME'] = 1;
-	if receive_updates:
-		merge_vars['READER'] = 1;
 
 	params = {
 		'apikey': settings.MC_API_KEY,
