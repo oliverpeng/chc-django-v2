@@ -1,0 +1,16 @@
+p.main { font-size: 16px; color: #000; margin-top: 30px; line-height: 24px; }
+
+aside { float: left; width: 260px; height: 275px; padding: 15px 15px 15px 20px; margin-right: 32px; margin-top: 50px; }
+aside:last-child { margin-right: 0; }
+
+aside h3 { font-size: 24px; margin-bottom: 17px; }
+aside h4 { font-size: 16px; font-family: "Lucida Sans Unicode"; }
+aside ul { font-size: 12px; margin: 10px 0; list-style: none; }
+
+ul.spread { padding-left: 12px; }
+ul.spread a, .updates { display: block; height: 27px; padding-left: 40px; color: #737373; background: url(/static/img/join/icons.gif) no-repeat 0 0; line-height: 27px; margin-bottom: 15px; }
+ul.spread a.twitter { background-position: 0 -36px; }
+ul.spread a.download { background-position: 0 -72px; }
+.updates { background-position: 0 -108px; }
+.updates input[type=text] { margin-top: 6px; width: 130px; }
+.updates .btn-link { display: inline-block; padding: 4px 0 5px; width: 50px; font-size: 14px; }
