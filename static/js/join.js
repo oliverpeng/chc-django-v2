@@ -4,4 +4,19 @@ $(document).ready( function() {
 		window.location.href = href;
 	});
 
+	$('form#subscribe').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			email: {
+				required: "",
+				email: "Please enter a valid email address"
+			}
+		},
+		errorLabelContainer: '#subscribe_error'
+	});
 });

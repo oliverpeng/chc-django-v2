@@ -6,7 +6,9 @@
 {% block extra_css %}
 <link rel="stylesheet" href="{% get_static_prefix %}css/join.css">
 {% endblock %}
+
 {% block extra_js %}
+<script src="{% get_static_prefix %}js/libs/jquery.validate.js"></script>
 <script src="{% get_static_prefix %}js/join.js"></script>
 {% endblock %}
 
@@ -91,9 +93,13 @@
 		<ul class="connect">
 			<li class="RSS"><a href="">Subscribe to RSS feed</a></li>
 			<li class="updates">
-				<label for="email">Receive Updates</label><br>
-				<input type="text" id="email" placeholder="Email Address"></input>
-				<input type="submit" value="Send" class="btn-link"></input>
+				<form id="subscribe" action="{% url subscribe %}" method="post">
+					{% csrf_token %}
+					<label for="email">Receive Updates</label><br>
+					<input type="text" id="email" name="email" placeholder="Email Address"></input>
+					<input type="submit" value="Send" class="btn-link"></input>
+					<span id="subscribe_error"></span>
+				</form>
 			</li>
 		</ul>
 

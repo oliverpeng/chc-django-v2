@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Churches Helping Churches - Sign Up{% endblock %}
+
+{% block extra_css %}
+<style>
+.dialog { margin: 50px 0; padding: 30px; width: 350px;}
+.dialog h3 { font-size: 24px; margin-bottom: 10px; background: url("/static/img/join/icons.gif") no-repeat scroll 0 -108px transparent; padding-left: 40px; color: #737373; }
+ul.error { color: red; font-size: 15px; margin-top: 10px; }
+input[type=text] { width: 336px; }
+.btn-link { margin: 15px 0 0; }
+
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% get_static_prefix %}js/libs/jquery.validate.js"></script>
+<script>
+$(document).ready( function() {
+	$('form#subscribe').validate({
+		rules: {
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			email: {
+				required: "",
+				email: "Please enter a valid email address"
+			}
+		}
+	});
+});
+</script>
+{% endblock %}
+
+{% block nav-join %}<a class="active" href="{% url join %}">Join</a>{% endblock %}
+
+{% block content %}
+{% get_static_prefix as STATIC_PREFIX %}
+<h2>Subscribe to our Newsletter</h2>
+
+<div class="shadow dialog">
+
+	<h3>Receive Updates</h3>
+	<form id="subscribe" method="post">
+		{% csrf_token %}
+		{{ form.non_field_errors }}
+		{% if error_msgs %}
+		<ul class="error">
+			{% for err in error_msgs %}
+			<li>{{ err }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		
+		<div class="fieldWrapper">
+			{{ form.email }}
+			{{ form.email.errors }}
+		</div>
+		
+	    <p><input type="submit" class="btn-link" value="Sign Up" /></p>
+	</form>
+</div>
+
+{% endblock %}

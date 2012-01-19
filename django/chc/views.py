@@ -27,67 +27,27 @@ class SignupForm(forms.Form):
 			raise forms.ValidationError('Please enter a church name if you are a pastor')
 		return cleaned_data
 
+class SubscribeForm(forms.Form):
+	email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder':'Email Address'}))
+
 class MailChimpException(Exception):
 	def __init__(self, err_code, message):
 		Exception.__init__(self, message)
 		self.err_code = err_code
 
-def mailchimp_subscribe(form):
+def mailchimp_subscribe(email_address, merge_vars={}):
 	""" Subscribe to MailChimp newsletter
 
 	"""
-	import urllib
-	import urllib2
-	import json
-	import settings
 
-	fname = form.cleaned_data['fname']
-	lname = form.cleaned_data['lname']
-	city = form.cleaned_data['city']
-	state = form.cleaned_data['state']
-	country = form.cleaned_data['country']
-	email = form.cleaned_data['email']
-	is_pastor = form.cleaned_data['is_pastor']
-	phone = form.cleaned_data['phone']
-	church_name = form.cleaned_data['church_name']
-	church_website = form.cleaned_data['church_website']
-	take_offering = form.cleaned_data['take_offering']
-	contact_me = form.cleaned_data['contact_me']
-	receive_updates = form.cleaned_data['receive_updates']
+	import urllib, urllib2, json, settings
 
 	url = 'http://us1.api.mailchimp.com/1.3/'
 	method = 'listSubscribe'
-
-	groupings = []
-	groups_705 = []
-	if is_pastor:
-		groupings.append({'id': 707, 'groups': 'Yes'})
-	
-	if take_offering:
-		groups_705.append('Our church will take an offering at the next crisis.')
-	if contact_me:
-		groups_705.append('Please contact me.')
-	if receive_updates:
-		groups_705.append('Subscribe to newsletter.')
-	
-	groupings.append({'id': 705, 'groups': ','.join(groups_705)})
-
-	merge_vars = {
-		'FNAME': fname,
-		'LNAME': lname,
-		'CITY': city,
-		'STATE': state,
-		'COUNTRY': country,
-		'PHONE': phone,
-		'CHURCH': church_name,
-		'WEBSITE': church_website,
-		'GROUPINGS': groupings
-	}
-
 	params = {
 		'apikey': settings.MC_API_KEY,
 		'id': settings.MC_LIST_ID,
-		'email_address': email,
+		'email_address': email_address,
 		'merge_vars': merge_vars
 	}
 
@@ -106,9 +66,21 @@ def mailchimp_subscribe(form):
 
 	return result
 
+def extract_href(err_msg):
+	""" Specialized function for extracting out href attribute from a MailChimp 214 error message
+
+	"""
+
+	import re
+	match = re.search(r'href=[\'"]?([^\'" >]+)', err_msg)
+	href = match.group(1) if match else ''
+	return href
+
 def email_pastor_subscribed(fname, lname, church_name, city, state, country, church_website, phone, email):
 	""" Email admin notifying that a pastor signed up
+
 	"""
+
 	from django.core.mail import send_mail
 	import textwrap
 	subject = "Pastor %s %s of %s has signed up" %(fname, lname, church_name)
@@ -138,18 +110,48 @@ def home(request):
 	return render(request, 'home.html')
 
 def join(request):
-	return render(request, 'join/index.html')
+	form = SubscribeForm()
+	c = { 'form': form }
+	return render_to_response('join/index.html', c, context_instance=RequestContext(request))
+
+def subscribe(request):
+	error_msgs = []
+
+	if request.method == 'POST':
+		form = SubscribeForm(request.POST)
+		if form.is_valid():
+			try:
+				email = form.cleaned_data['email']
+				merge_vars = {
+					'GROUPINGS': [{'id': 705, 'groups': 'Subscribe to newsletter.'}]
+				}
+				mailchimp_subscribe(email, merge_vars)
+				return HttpResponseRedirect( reverse('subscribe_thanks') )
+			except MailChimpException as e:
+				if e.err_code == 214: # user already subscribed
+					request.session['signup.is_duplicate'] = True
+					request.session['signup.email'] = form.cleaned_data['email']
+					request.session['signup.mailchimp_link'] = extract_href(e.message)
+
+					return HttpResponseRedirect( reverse('subscribe_thanks') )
+				else:
+					error_msgs.append("Oops! It looks like an error occurred. Please try again!")
+			pass
+		else:
+			pass
+	else:
+		form = SubscribeForm()
+
+	c = { 'form': form, 'error_msgs': error_msgs }
+	return render_to_response('join/subscribe.html', c, context_instance=RequestContext(request))
 
 def signup(request):
-	from django.core.context_processors import csrf
 	error_msgs = []
 
 	if request.method == 'POST':
 		form = SignupForm(request.POST)
 		if form.is_valid():
 			try:
-				mailchimp_subscribe(form)
-
 				fname = form.cleaned_data['fname']
 				lname = form.cleaned_data['lname']
 				city = form.cleaned_data['city']
@@ -162,6 +164,36 @@ def signup(request):
 				church_website = form.cleaned_data['church_website']
 				is_pastor = form.cleaned_data['is_pastor']
 				contact_me = form.cleaned_data['contact_me']
+				take_offering = form.cleaned_data['take_offering']
+				contact_me = form.cleaned_data['contact_me']
+				receive_updates = form.cleaned_data['receive_updates']
+
+				groupings = []
+				groups_705 = []
+				if is_pastor:
+					groupings.append({'id': 707, 'groups': 'Yes'})
+				
+				if take_offering:
+					groups_705.append('Our church will take an offering at the next crisis.')
+				if contact_me:
+					groups_705.append('Please contact me.')
+				if receive_updates:
+					groups_705.append('Subscribe to newsletter.')
+				
+				groupings.append({'id': 705, 'groups': ','.join(groups_705)})
+
+				merge_vars = {
+					'FNAME': fname,
+					'LNAME': lname,
+					'CITY': city,
+					'STATE': state,
+					'COUNTRY': country,
+					'PHONE': phone,
+					'CHURCH': church_name,
+					'WEBSITE': church_website,
+					'GROUPINGS': groupings
+				}
+				mailchimp_subscribe(email, merge_vars)
 
 				if is_pastor:
 					email_pastor_subscribed(fname=fname, lname=lname, church_name=church_name,
@@ -172,11 +204,7 @@ def signup(request):
 				if e.err_code == 214: # User already subscribed
 					request.session['signup.is_duplicate'] = True
 					request.session['signup.email'] = form.cleaned_data['email']
-
-					import re
-					match = re.search(r'href=[\'"]?([^\'" >]+)', e.message)
-					href = match.group(1) if match else ''
-					request.session['signup.mailchimp_link'] = href
+					request.session['signup.mailchimp_link'] = extract_href(e.message)
 					
 					return HttpResponseRedirect( reverse('thanks') )
 				else:
