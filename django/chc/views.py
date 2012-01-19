@@ -19,6 +19,13 @@ class SignupForm(forms.Form):
 	contact_me = forms.BooleanField(required=False, label="I am interested. Please contact me.")
 	receive_updates = forms.BooleanField(required=False, label="I would like to receive updates.", initial=True)
 
+	def clean(self):
+		cleaned_data = self.cleaned_data
+		church_name = cleaned_data.get('church_name')
+		is_pastor = cleaned_data.get('is_pastor')
+		if is_pastor and not church_name:
+			raise forms.ValidationError('Please enter a church name if you are a pastor')
+
 class MailChimpException(Exception):
 	def __init__(self, err_code, message):
 		Exception.__init__(self, message)

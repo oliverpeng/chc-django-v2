@@ -19,3 +19,5 @@ input[type=text] { width: 100%; }
 .checkbox label { display: inline; margin-left: 9px; }
 
 .btn-link { margin: 15px 0; width: 160px; }
+
+.highlight.church_name { display: none; }
