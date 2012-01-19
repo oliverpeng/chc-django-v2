@@ -25,6 +25,7 @@ class SignupForm(forms.Form):
 		is_pastor = cleaned_data.get('is_pastor')
 		if is_pastor and not church_name:
 			raise forms.ValidationError('Please enter a church name if you are a pastor')
+		return cleaned_data
 
 class MailChimpException(Exception):
 	def __init__(self, err_code, message):
