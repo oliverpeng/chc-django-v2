@@ -17,7 +17,7 @@ class SignupForm(forms.Form):
 	church_website = forms.URLField(required=False, label="Church Website")
 	take_offering = forms.BooleanField(required=False, label="I'm on board. Our church will take an offering at the next crisis.")
 	contact_me = forms.BooleanField(required=False, label="I am interested. Please contact me.")
-	receive_updates = forms.BooleanField(required=False, label="I would like to receive updates.")
+	receive_updates = forms.BooleanField(required=False, label="I would like to receive updates.", initial=True)
 
 class MailChimpException(Exception):
 	def __init__(self, err_code, message):
@@ -98,6 +98,30 @@ def mailchimp_subscribe(form):
 
 	return result
 
+def email_pastor_subscribed(fname, lname, church_name, city, state, country, church_website, phone, email):
+	""" Email admin notifying that a pastor signed up
+	"""
+	from django.core.mail import send_mail
+	import textwrap
+	subject = "Pastor %s %s of %s has signed up" %(fname, lname, church_name)
+	message = u"""A form submission has been processed. Please check that the user is listed in MailChimp before contacting him/her.
+It is possible they may not have confirmed their sign up via their confirmation email.
+
+First Name: %s
+Last Name: %s
+City: %s
+State: %s
+Country: %s
+
+Church: %s
+Website: %s
+
+Phone: %s
+Email: %s""" % (fname, lname, city, state, country, church_name, church_website, phone, email) 
+	sender = 'oliverpeng@gmail.com'
+	recipients = ['oliverpeng@gmail.com']
+	send_mail(subject, textwrap.dedent(message), sender, recipients)
+
 # =============================================================================
 #  Views
 # =============================================================================
@@ -117,14 +141,24 @@ def signup(request):
 		if form.is_valid():
 			try:
 				mailchimp_subscribe(form)
+
+				fname = form.cleaned_data['fname']
+				lname = form.cleaned_data['lname']
+				city = form.cleaned_data['city']
+				state = form.cleaned_data['state']
+				country = form.cleaned_data['country']
+				email = form.cleaned_data['email']
+				is_pastor = form.cleaned_data['is_pastor']
+				phone = form.cleaned_data['phone']
+				church_name = form.cleaned_data['church_name']
+				church_website = form.cleaned_data['church_website']
 				is_pastor = form.cleaned_data['is_pastor']
 				contact_me = form.cleaned_data['contact_me']
 
 				if is_pastor:
-					pass
-				#	from django.core.mail import send_mail
-				#	message = ""
-				#	send_mail("Pastor signed up", message, sender, recipients)
+					email_pastor_subscribed(fname=fname, lname=lname, church_name=church_name,
+						city=city, state=state, country=country, church_website=church_website,
+						phone=phone, email=email)
 				return HttpResponseRedirect( reverse('thanks') )
 			except MailChimpException as e:
 				if e.err_code == 214: # User already subscribed

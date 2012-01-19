@@ -154,7 +154,6 @@ figure { margin: 0; }
 
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
-.errorlist { color: red; font-size: 12px; }
 
 /* Indicate that 'label' will shift focus to the associated form element */
 label { cursor: pointer; font-size: 14px; }
@@ -201,6 +200,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] { cursor
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
 input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+input[type="text"] { border: 1px solid #c2c7c8; padding: 4px 6px; }
+
 
 /* 
  * Remove inner padding and border in FF3/4: h5bp.com/l 
@@ -219,6 +220,12 @@ textarea { overflow: auto; vertical-align: top; resize: vertical; }
 input:valid, textarea:valid {  }
 input:invalid, textarea:invalid { background-color: #f0dddd; }
 
+/* 
+ * Form validation styles (Django errors & jquery.validation.js)
+ */
+
+input[type="text"].error { background-color: #ffcdcd; }
+label.error, .errorlist { color: red; font-size: 12px; }
 
 /* =============================================================================
    Tables

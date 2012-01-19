@@ -5,6 +5,7 @@ ul.error { color: red; font-size: 15px; margin-top: 10px; }
 
 label { display: block; }
 input[type=text] { width: 100%; }
+
 .fieldWrapper { clear: both; margin-top: 15px; width: 460px; }
 .fieldWrapper.lcol, .fieldWrapper.rcol { width: 220px; float: left; }
 .fieldWrapper.rcol { clear: none; margin-left: 20px; }
