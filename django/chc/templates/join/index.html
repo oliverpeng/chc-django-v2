@@ -27,7 +27,7 @@
 		<div class="youtube">
 			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<a class="btn-link big" href="{% url signup %}">Sign up now</a>
+		<a class="btn-link big" href="{% url join.signup %}">Sign up now</a>
 		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
 	</article>
 	
@@ -36,7 +36,7 @@
 		<div class="youtube">
 			<iframe width="420" height="235" src="http://www.youtube.com/embed/a9MoMj8x94s?rel=0&modestbranding=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
 		</div>
-		<a class="btn-link big" href="{% url signup %}">Sign up now</a>
+		<a class="btn-link big" href="{% url join.signup %}">Sign up now</a>
 		<p>Info Kit: <a href="">Download</a> or <a href="">Send Me One</a></p>
 	</article>
 </section>
@@ -46,22 +46,22 @@
 	<div id="bar" class="shadow clearfix">
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/pray-online.jpg">
-			<h3><a href="{% url pray %}">Pray Online</a></h3>
+			<h3><a href="{% url join.pray %}">Pray Online</a></h3>
 			<p>Write your prayer on our global map of prayers for churches in crisis.</p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/prayer-book.jpg">
-			<h3><a href="{% url sendprayer %}">Send Prayer Book</a></h3>
+			<h3><a href="{% url join.sendprayer %}">Send Prayer Book</a></h3>
 			<p>Create a custom prayer book to encourage a pastor. </p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/chc-live.jpg">
-			<h3><a href="{% url chclive %}">Experience CHC Live</a></h3>
+			<h3><a href="{% url join.chclive %}">Experience CHC Live</a></h3>
 			<p>Invite CHC to your church for a presentation that will challenge the community of believers.</p>
 		</article>
 		<article>
 			<img src="{{STATIC_PREFIX}}img/join/partner-church.jpg">
-			<h3><a href="{% url partner %}">Partner with a Church</a></h3>
+			<h3><a href="{% url join.partner %}">Partner with a Church</a></h3>
 			<p>For churches who want to go deeper, enter in a long-term relationship with a church in crisis.</p>
 		</article>
 	</div>
@@ -93,7 +93,7 @@
 		<ul class="connect">
 			<li class="RSS"><a href="">Subscribe to RSS feed</a></li>
 			<li class="updates">
-				<form id="subscribe" action="{% url subscribe %}" method="post">
+				<form id="subscribe" action="{% url join.subscribe %}" method="post">
 					{% csrf_token %}
 					<label for="email">Receive Updates</label><br>
 					<input type="text" id="email" name="email" placeholder="Email Address"></input>

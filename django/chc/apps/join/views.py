@@ -1,13 +1,18 @@
+from django.core.urlresolvers import reverse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, render_to_response
+from django.template import RequestContext
+
 def join(request):
-	from lib.Forms import SubscribeForm
+	from forms import SubscribeForm
 
 	form = SubscribeForm()
 	c = { 'form': form }
 	return render_to_response('join/index.html', c, context_instance=RequestContext(request))
 
 def subscribe(request):
-	from lib.Forms import SubscribeForm
-	import lib.MailChimp as MailChimp
+	from forms import SubscribeForm
+	import chc.lib.MailChimp as MailChimp
 	error_msgs = []
 
 	if request.method == 'POST':
@@ -19,14 +24,14 @@ def subscribe(request):
 					'GROUPINGS': [{'id': 705, 'groups': 'Subscribe to newsletter.'}]
 				}
 				MailChimp.list_subscribe(email, merge_vars)
-				return HttpResponseRedirect( reverse('subscribe_thanks') )
+				return HttpResponseRedirect( reverse('join.subscribe_thanks') )
 			except MailChimp.MC_Exception as e:
 				if e.err_code == 214: # user already subscribed
 					request.session['signup.is_duplicate'] = True
 					request.session['signup.email'] = form.cleaned_data['email']
 					request.session['signup.mailchimp_link'] = MailChimp.extract_href(e.message)
 
-					return HttpResponseRedirect( reverse('subscribe_thanks') )
+					return HttpResponseRedirect( reverse('join.subscribe_thanks') )
 				else:
 					error_msgs.append("Oops! It looks like an error occurred. Please try again!")
 			pass
@@ -39,8 +44,8 @@ def subscribe(request):
 	return render_to_response('join/subscribe.html', c, context_instance=RequestContext(request))
 
 def signup(request):
-	from lib.Forms import SignupForm
-	import lib.MailChimp as MailChimp
+	from forms import SignupForm
+	import chc.lib.MailChimp as MailChimp
 	error_msgs = []
 
 	if request.method == 'POST':
@@ -94,14 +99,14 @@ def signup(request):
 					MailChimp.email_pastor_subscribed(fname=fname, lname=lname, church_name=church_name,
 						city=city, state=state, country=country, church_website=church_website,
 						phone=phone, email=email)
-				return HttpResponseRedirect( reverse('thanks') )
+				return HttpResponseRedirect( reverse('join.thanks') )
 			except MailChimp.MC_Exception as e:
 				if e.err_code == 214: # User already subscribed
 					request.session['signup.is_duplicate'] = True
 					request.session['signup.email'] = form.cleaned_data['email']
 					request.session['signup.mailchimp_link'] = MailChimp.extract_href(e.message)
 					
-					return HttpResponseRedirect( reverse('thanks') )
+					return HttpResponseRedirect( reverse('join.thanks') )
 				else:
 					error_msgs.append("Oops! It looks like an error occurred. Please try again!")
 		else:

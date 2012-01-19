@@ -1,13 +1,13 @@
 from django.conf.urls.defaults import *
 
-urlpatterns = patterns('views',
-    url(r'^join/$', 'chc.views.join', name='join'),
-    url(r'^join/signup/$', 'chc.views.signup', name='signup'),
-    url(r'^join/signup/thankyou/$', 'chc.views.thanks', name='thanks'),
-    url(r'^join/subscribe/$', 'chc.views.subscribe', name='subscribe'),
-    url(r'^join/subscribe/thankyou$', 'chc.views.thanks', name='subscribe_thanks'),
-    url(r'^join/pray/$', 'chc.views.pray', name='pray'),
-    url(r'^join/sendprayer/$', 'chc.views.sendprayer', name='sendprayer'),
-    url(r'^join/chclive/$', 'chc.views.chclive', name='chclive'),
-    url(r'^join/partner$', 'chc.views.partner', name='partner'),
+urlpatterns = patterns('chc.apps.join.views',
+    url(r'^$', 'join', name='join'),
+    url(r'^signup/$', 'signup', name='join.signup'),
+    url(r'^signup/thankyou/$', 'thanks', name='join.thanks'),
+    url(r'^subscribe/$', 'subscribe', name='join.subscribe'),
+    url(r'^subscribe/thankyou$', 'thanks', name='join.subscribe_thanks'),
+    url(r'^pray/$', 'pray', name='join.pray'),
+    url(r'^sendprayer/$', 'sendprayer', name='join.sendprayer'),
+    url(r'^chclive/$', 'chclive', name='join.chclive'),
+    url(r'^partner$', 'partner', name='join.partner'),
 )
