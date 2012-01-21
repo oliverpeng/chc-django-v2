@@ -11,17 +11,27 @@ Version: 1
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
+#wp-main { width: 670px; float: left; }
+#sidebar { width: 260px; float: right; }
 
-.post {}
+.post { padding: 12px 20px; margin: 0 0 22px 0; }
 
-.entry-content {}
+.excert {  }
+.excerpt a { display: block; float: right; margin-left: 20px; border: 1px solid #cecdcc; }
+.read-more { margin: 15px 0; }
+
+.entry { display: none; }
+.entry-content { }
 .entry-content a {}
 .entry-content a:hover {}
 
+footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px 0; margin: 10px 0; }
+
 #meta {}
-.postmetadata {}
+.postmetadata { margin: 30px 0 0; }
 
 #sidebar {}
+#sidebar .widget { padding: 17px; margin: 0 0 20px; }
 
 .navgation {}
 .next-posts {}
@@ -30,7 +40,9 @@ Version: 1
 #searchform {}
 #s {}
 #searchsubmt {}
-	
+
+p { margin-bottom: 15px; line-height: 21px; font-size: 14px;  }
+
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
 ol.commentlist li.alt {}

@@ -1,37 +1,45 @@
 <?php get_header(); ?>
 
 	<div id="main" role="main" class="clearfix">
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div id="wp-main">
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<article <?php post_class('shadow') ?> id="post-<?php the_ID(); ?>">
 
-				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 
-				<?php include (TEMPLATEPATH . '/_/inc/meta.php' ); ?>
+					<?php include (TEMPLATEPATH . '/_/inc/meta.php' ); ?>
 
-				<div class="entry">
-					<?php the_content(); ?>
-				</div>
+					<div class="excerpt clearfix">
+						<?php the_excerpt(); ?>
+					</div>
 
-				<footer class="postmetadata">
-					<?php the_tags('Tags: ', ', ', '<br />'); ?>
-					Posted in <?php the_category(', ') ?> | 
-					<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
-				</footer>
+					<a class="read-more btn-link">Read More +</a>
 
-			</article>
+					<div class="entry">
+						<?php the_content(); ?>
+					</div>
 
-		<?php endwhile; ?>
+					<footer class="postmetadata">
+						<?php the_tags('Tags: ', ', ', '<br />'); ?>
+						Posted in <?php the_category(', ') ?> | 
+						<?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
+					</footer>
 
-		<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
+				</article>
 
-		<?php else : ?>
+			<?php endwhile; ?>
 
-			<h2>Not Found</h2>
+			<?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 
-		<?php endif; ?>
+			<?php else : ?>
 
-	<?php get_sidebar(); ?>
+				<h2>Not Found</h2>
+
+			<?php endif; ?>
+		</div>
+
+		<?php get_sidebar(); ?>
 
 	</div>
 	<div class="push"></div>

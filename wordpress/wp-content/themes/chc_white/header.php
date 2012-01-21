@@ -82,7 +82,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
-	<script src="<?php bloginfo('template_directory'); ?>/_/js/modernizr-1.7.min.js"></script>
+	<script src="/static/js/libs/modernizr-2.0.6.min.js"></script>
 	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
