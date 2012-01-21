@@ -55,7 +55,7 @@ body, button, input, select, textarea { font-family: "Lucida Sans Unicode", sans
 a { color: #898518; text-decoration: none; }
 a:visited { color: #898518; }
 a:hover { color: #737373; }
-a:focus { outline: thin dotted; }
+a:focus { outline: 0; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
 a:hover, a:active { outline: 0; }
