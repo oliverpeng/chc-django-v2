@@ -242,44 +242,47 @@ td { vertical-align: top; }
 .container, #main { width: 950px; margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 { font-family: NillandRegular; font-weight: normal; color: #000; }
-h2, h3 { font-size: 44px; }
+h1, h2, h3 { font-size: 44px; }
 
 header { background: url("/static/img/header-bg.gif") repeat-x scroll left top transparent; height: 97px; }
 #logo { float: left; margin-right: 35px; margin-top: 12px; }
 #logo a { background: url("/static/img/logo.png") no-repeat scroll left top transparent; display: block; width: 177px; height: 70px; }
+header nav { position: relative; }
+header nav ul { position: absolute; right: 0; }
 header nav li { float: left; }
-header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 27px; display: block; line-height: 97px; }
+header nav a, header nav strong { text-decoration: none; font-size: 15px; padding: 0 32px; display: block; line-height: 97px; }
+header nav li:last-child a, header nav li:last-child strong { padding-right: 0; }
 header nav a, header nav a:visited { color: #000; }
 header nav a:hover { color: #737373; }
 header nav strong, header nav a.active { font-weight: normal; color: #898518; }
 
 #wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -228px; }
-footer, .push { height: 228px; }
+body > footer, .push { height: 228px; }
 
 #main { padding-bottom: 42px; padding-top: 25px; }
 
 
-footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; font-size: 12px; }
-footer .container { position: relative; height: 228px; }
-footer .column { float: left; padding-top: 24px; }
-footer .column:first { width: 285px; margin-left: 21px; }
-footer .column:nth-child(2) { width: 285px; margin-left: 25px; }
-footer .column:nth-child(3) { width: 310px; margin-left: 25px; }
-footer h4 { margin-bottom: 13px; font-size: 18px; }
-footer .org, footer .adr, footer .tel, footer .email { padding-left: 30px; }
-footer .org, footer .tel, footer .email { background: url(/static/img/footer-icons.png) no-repeat 3px 2px; }
-footer .tel { background-position: 3px -39px; }
-footer .email { background-position: 3px -59px; }
-footer .tel, footer .email { display: block; margin-top: 15px; }
-footer ul.connect { padding: 0; list-style: none; }
-footer ul.connect li { float: left; margin-right: 9px;}
-footer ul.connect li a { display: block; width: 28px; height: 56px; background: url(/static/img/footer-icons.png) no-repeat 0 -83px; }
-footer ul.connect li:nth-child(2) a { background-position: -36px -83px; }
-footer ul.connect li:nth-child(3) a { background-position: -73px -83px; }
-footer ul.connect li:nth-child(1) a:hover { background-position: 0 -139px; }
-footer ul.connect li:nth-child(2) a:hover { background-position: -36px -139px; }
-footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
-footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; }
+body > footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; font-size: 12px; }
+body > footer .container { position: relative; height: 228px; }
+body > footer .column { float: left; padding-top: 24px; }
+body > footer .column:first { width: 285px; margin-left: 21px; }
+body > footer .column:nth-child(2) { width: 285px; margin-left: 25px; }
+body > footer .column:nth-child(3) { width: 310px; margin-left: 25px; }
+body > footer h4 { margin-bottom: 13px; font-size: 18px; }
+body > footer .org, footer .adr, footer .tel, footer .email { padding-left: 30px; }
+body > footer .org, footer .tel, footer .email { background: url(/static/img/footer-icons.png) no-repeat 3px 2px; }
+body > footer .tel { background-position: 3px -39px; }
+body > footer .email { background-position: 3px -59px; }
+body > footer .tel, footer .email { display: block; margin-top: 15px; }
+body > footer ul.connect { padding: 0; list-style: none; }
+body > footer ul.connect li { float: left; margin-right: 9px;}
+body > footer ul.connect li a { display: block; width: 28px; height: 56px; background: url(/static/img/footer-icons.png) no-repeat 0 -83px; }
+body > footer ul.connect li:nth-child(2) a { background-position: -36px -83px; }
+body > footer ul.connect li:nth-child(3) a { background-position: -73px -83px; }
+body > footer ul.connect li:nth-child(1) a:hover { background-position: 0 -139px; }
+body > footer ul.connect li:nth-child(2) a:hover { background-position: -36px -139px; }
+body > footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
+body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; }
 
 
 .btn-link { font-family: NillandRegular; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; color: #898518; }
