@@ -1,8 +1,45 @@
-		<footer id="footer" class="source-org vcard copyright">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
-		</footer>
+	<footer>
+        <h2 hidden>Footer</h2>
+        <div class="container">
+            <div class="column">
+                <h4>Contact Us</h4>
+                <div class="vcard">
+                    <span class="fn n">
+                        <span class="given-name"></span>
+                        <span class="additional-name"></span>
+                        <span class="family-name"></span>
+                    </span>
+                    <div class="org">Churches Helping Churches</div>
+                    <div class="adr">
+                        <div class="street-address">P.O. Box 6558</div>
+                        <span class="locality">Elgin</span>, 
+                        <span class="region">IL</span><br>
+                        <span class="postal-code">60121-6558</span>
+                    </div>
+                    <div class="tel">1-847-398-7024 ext. 3452</div>
+                    <a class="email" href="mailto:information@churcheshelpingchurches.com">information@churcheshelpingchurches.com</a>
+                </div>  
+            </div>
+            <div class="column">
+                <h4>Co-Founders</h4>
+                <ul class="square">
+                    <li><a title="James MacDonald" href="http://jamesmacdonald.com/" target="_blank">jamesmacdonald.com</a></li>
+                    <li><a title="Pastor Mark" href="http://pastormark.tv/" target="_blank">pastormark.tv</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <h4>Search</h4>
+                <h4>Connect With Us</h4>
+                <ul class="connect">
+                    <li><a title="Facebook" href="https://www.facebook.com/ChurchesHelpingChurches" target="_blank" class="ir">Facebook</a></li>
+                    <li><a title="RSS" href="" target="_blank" class="ir">RSS Feed</a></li>
+                    <li><a title="Twitter" href="http://twitter.com/churcheshelping" target="_blank" class="ir">Twitter</a></li>
+                </ul>
+            </div>
 
-	</div>
+            <p id="copyright">Copyright © 2011-2012 Churches Helping Churches. All rights reserved.</p>
+        </div>
+    </footer>
 
 	<?php wp_footer(); ?>
 

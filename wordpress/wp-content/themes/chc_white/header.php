@@ -7,8 +7,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" <?php language_attributes(); ?>><!--<![endif]-->
 <!-- the "no-js" class is for Modernizr. -->
 
-<head id="www-sitename-com" data-template-set="html5-reset-wordpress-theme" profile="http://gmpg.org/xfn/11">
-
+<head>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	
 	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
@@ -62,22 +61,10 @@
 	<meta name="google-site-verification" content="">
 	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
 	
-	<meta name="author" content="Your Name Here">
-	<meta name="Copyright" content="Copyright Your Name Here 2011. All Rights Reserved.">
-
-	<!-- Dublin Core Metadata : http://dublincore.org/ -->
-	<meta name="DC.title" content="Project Name">
-	<meta name="DC.subject" content="What you're about.">
-	<meta name="DC.creator" content="Who made this site.">
+	<meta name="author" content="Oliver Peng">
+	<meta name="Copyright" content="Copyright Churches Helping Churches 2012. All Rights Reserved.">
 	
-	<!--  Mobile Viewport meta tag
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width -->
-	<!-- Uncomment to use; use thoughtfully!
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	-->
+
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 	<!-- This is the traditional favicon.
@@ -107,10 +94,24 @@
 
 <body <?php body_class(); ?>>
 	
-	<div id="page-wrap"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+	<div id="wrapper">
+		
+		<header>
+			<div class="container">
+				<h1 id="logo" class="ir"><a title="home" href="/">Churches Helping Churches</a></h1>
 
-		<header id="header">
-			<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<div class="description"><?php bloginfo('description'); ?></div>
+				<nav>
+					<h2 hidden>Main Navigation</h2>
+					<ul>
+					    <li><a href="/join">Join</a></li>
+					    <li><a href="/what_we_do">What We Do</a></li>
+					    <li><a href="/who_we_are">Who We Are</a></li>
+					    <li><a href="/churches">The Churches</a></li>
+					    <li><a href="/blog">Blog</a></li>
+					    <li><a href="/give">Give</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
+
 
