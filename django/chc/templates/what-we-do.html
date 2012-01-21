@@ -1,9 +1,58 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Churches Helping Churches - What We Do{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/slider.css">
+<link rel="stylesheet" href="{% get_static_prefix %}css/what-we-do.css">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ STATIC_URL }}js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="{{ STATIC_URL }}js/libs/jquery.localscroll-1.2.7-min.js"></script>
+<script src="{{ STATIC_URL }}js/libs/jquery.serialScroll-1.2.2-min.js"></script>
+<script src="{{ STATIC_URL }}js/mylibs/slider.js"></script>
+{% endblock %}
 
 {% block nav-what-we-do %}<strong>What We Do</strong>{% endblock %}
 
 {% block content %}
-<h1>What We Do</h1>
+<h2>What We Do</h2>
+
+<div id="slider">
+    <ul class="navigation clearfix">
+      <li><a class="btn-link" href="#pastors">Churces Helping Pastors</a></li>
+      <li><a class="btn-link" href="#reconstruction">Church Reconstruction</a></li>
+      <li><a class="btn-link" href="#recovery">Resource Recovery</a></li>
+      <li><a class="btn-link" href="#opportunity">As We Have Opportunity</a></li>
+    </ul>
+    
+    {# element with overflow applied #}
+    <div class="scroll">
+        {# the element that will be scrolled during the effect #}
+        <div class="scrollContainer">
+            <article class="panel" id="pastors">
+                <h3>The best way to start rebuilding a church<br>is to rebuild the pastor.</h3>
+                <p>CHP is a Gospel-centered grief counseling initiative focused on treating and training pastors who are leaders and victims after a crisis.</p>
+            </article>
+            <article class="panel" id="reconstruction">
+                <h3>The church is more than just a building.</h3>
+                <p>CHC helps churches rebuild their structures so the people of God can worship together under a roof and out of the weather, but our reconstruction projects are about so much more than just the building.</p>
+            </article>
+            <article class="panel" id="recovery">
+                <h3>Getting the Church back on its feet.</h3>
+                <p>Sometimes all it takes for a ministry to get going again is a small apartment for a pastor or a rental space to meet in or a bicycle to visit community members.</p>
+            </article>
+            <article class="panel" id="opportunity">
+                <h3>CHC engages in additional miscellaneous projects that<br>will help the church.</h3>
+                <p>To see a list of completed projects click on a flag at the bottom of this page.</p>
+            </article>
+        </div>
+    </div>
+
+    <div id="flag">
+        <h4>Click on a flag below to see a list of completed projects in that country:</h4>
+    </div>
+</div>
 {% endblock %}
