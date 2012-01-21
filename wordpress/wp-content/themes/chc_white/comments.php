@@ -82,11 +82,11 @@
 		<!--<p>You can use these tags: <code><?php echo allowed_tags(); ?></code></p>-->
 
 		<div>
-			<textarea name="comment" id="comment" cols="58" rows="10" tabindex="4"></textarea>
+			<textarea name="comment" id="comment" cols="82" rows="10" tabindex="4"></textarea>
 		</div>
 
 		<div>
-			<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+			<input name="submit" type="submit" id="submit" class="btn-link" tabindex="5" value="Submit Comment" />
 			<?php comment_id_fields(); ?>
 		</div>
 		

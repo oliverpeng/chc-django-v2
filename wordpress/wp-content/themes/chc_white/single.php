@@ -8,7 +8,7 @@
 					
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 
-					<div class="entry-content">
+					<div class="entry">
 						
 						<?php the_content(); ?>
 

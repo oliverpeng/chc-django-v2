@@ -20,10 +20,9 @@ Version: 1
 .excerpt a { display: block; float: right; margin-left: 20px; border: 1px solid #cecdcc; }
 .read-more { margin: 15px 0; }
 
-.entry { display: none; }
-.entry-content { }
-.entry-content a {}
-.entry-content a:hover {}
+.entry { }
+.entry ul, .entry ol { list-style: disc; margin: 0 0 15px; padding: 0 0 0 30px; }
+.entry li { margin-bottom: 10px; }
 
 footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px 0; margin: 10px 0; }
 
@@ -33,6 +32,9 @@ footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px
 #sidebar {}
 #sidebar .widget { padding: 17px; margin: 0 0 20px; }
 
+#respond { margin-top: 15px; }
+#respond #commentform #submit { margin: 10px 0; width: 150px; }
+
 .navgation {}
 .next-posts {}
 .prev-posts {}
@@ -41,7 +43,7 @@ footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px
 #s {}
 #searchsubmt {}
 
-p { margin-bottom: 15px; line-height: 21px; font-size: 14px;  }
+p { margin: 15px 0; line-height: 21px; font-size: 14px;  }
 
 ol.commentlist {list-style: none;}
 ol.commentlist li {}

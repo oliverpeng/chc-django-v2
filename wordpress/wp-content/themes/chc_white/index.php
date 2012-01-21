@@ -16,7 +16,7 @@
 
 					<a class="read-more btn-link">Read More +</a>
 
-					<div class="entry">
+					<div class="entry" style="display:none">
 						<?php the_content(); ?>
 					</div>
 
