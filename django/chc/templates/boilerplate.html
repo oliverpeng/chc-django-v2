@@ -15,7 +15,8 @@
   <title>{% block title %}Name your pages!{% endblock %}</title>
   {% block metadata %}
   <meta name="description" content="{% block description %}{% endblock %}">
-  <meta name="author" content="{% block author %}{% endblock %}">
+  <meta name="author" content="{% block author %}Oliver Peng{% endblock %}">
+  <meta name="Copyright" content="Copyright Churches Helping Churches 2012. All Rights Reserved.">
   {% endblock %}
 
   {# Mobile viewport optimized: j.mp/bplateviewport #}
@@ -53,6 +54,7 @@
   www.modernizr.com/download/
   {% endcomment %}
   {# modernizr and respond are also only loaded in the head for IE, else they are included in main.js at the end #}
+  <script src="{{ STATIC_PREFIX }}js/libs/modernizr-2.0.6.min.js"></script>
   <!--[if lt IE 8]>{# % include_media 'head-ie.js' % #}<![endif]-->
   {% endblock %}
   {% block extra_head %}{% endblock %}
@@ -89,7 +91,6 @@
   <!--[if lt IE 8]>{# % include_media 'main-ie.js' % #}<![endif]-->
   <!--[if (!IE)|(gte IE 8)]><!--> {# % include_media 'main.js' % #} <!--<![endif]-->
   {% get_static_prefix as STATIC_PREFIX %}
-  <script src="{{ STATIC_PREFIX }}js/libs/modernizr-2.0.6.min.js"></script>
   <script src="{{ STATIC_PREFIX }}js/libs/jquery-1.6.2.min.js"></script>
   {% endblock %}
   {% block extra_js %}{% endblock %}
