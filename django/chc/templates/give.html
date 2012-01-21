@@ -1,9 +1,50 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Churches Helping Churches - Give{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/give.css">
+{% endblock %}
 
 {% block nav-give %}<strong>Give</strong>{% endblock %}
 
 {% block content %}
-<h1>Give</h1>
+<article>
+    <h2>Give</h2>
+
+    <div class="shadow clearfix">
+        <a class="btn-link big" href="https://donate.churcheshelpingchurches.com/">Credit Card or Check</a>
+        <a class="btn-link big" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=69Y8M5YWHS28J" rel="nofollow">PayPal</a>
+        <a class="btn-link big" href="http://www.canadahelps.org/CharityProfilePage.aspx?CharityID=d99876" rel="nofollow">Canadian Donors</a>
+
+        <div class="left">
+            <p class="big">
+                Thank you for your interest in Churches  Helping Churches. God will use the generous support of people like you to meet the needs of the churches in need.
+            </p>
+            <p>
+                Thank you for your willingness to be used for such a time as this. We promise to put your gift to careful use. We pray that God will use His Word to strengthen and encourage the faith of the people in these disaster-affected areas and of the global Church as we respond to these crises.
+                <br><br>
+                God bless you for your generosity.
+            </p>
+            <p class="by">— Pastors Mark Driscoll and James MacDonald<br>for Churches Helping Churches</p>
+        </div>
+
+        <div class="right">
+            <p>
+                Need help with your gift?<br>
+                <a href="mailto:information@churcheshelpingchurches.com">Send us an email</a>!<br><br>
+
+                Churches Helping Churches is a 501(c)(3) Registered Charity <br>
+                27-1747541<br><br>
+
+                Churches Helping Churches<br>
+                P.O. Box 6558<br>
+                Elgin, IL 60121-6558
+            </p>
+        </div>
+    </div>
+</article>
+
+
 {% endblock %}

@@ -1,0 +1,10 @@
+#main { padding-top: 60px; }
+.shadow { margin-bottom: 16px; padding: 20px; }
+.left { float: left; }
+h2 { font-size: 35px; margin-bottom: 12px; }
+p.big { font-size: 24px; font-family: "Lucida Sans Unicode",sans-serif; color: #000; padding-bottom: 18px; }
+p { font-size: 18px; font-family: "Lucida Sans Unicode",sans-serif; color: #000; }
+.btn-link.big { font-size: 25px; float: left; margin-left: 8px; }
+.left { margin: 30px 0 0 15px; width: 580px; }
+.by { text-align: right; padding-top: 15px; }
+.right { width: 270px; margin: 30px 0 0 15px; float: left; }
