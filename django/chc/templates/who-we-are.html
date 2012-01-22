@@ -4,8 +4,8 @@
 {% block title %}Churches Helping Churches - Where We Are{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% get_static_prefix %}css/slider.css">
-<link rel="stylesheet" href="{% get_static_prefix %}css/who-we-are.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/slider.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/who-we-are.css">
 {% endblock %}
 
 {% block extra_js %}
@@ -29,7 +29,7 @@
         <li><a class="btn-link" href="#faq">FAQ</a></li>
     </ul>
 
-    <div class="scroll">
+    <div class="scroll shadow">
         <div class="scrollContainer">
             <article class="panel" id="about-us">
                 <p>

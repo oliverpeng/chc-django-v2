@@ -1,8 +1,24 @@
-#slider .navigation a { width: 168px; } /* set appropriate width to fit all the links */
-#slider .scroll { border: none; height: auto; }
-
 .half { float: left; margin-right: 15px; width: 423px; }
 .left { float: left; width: 172px; }
 .right { float: left; width: 242px; }
 .gray { color: #737373; }
 .small li { font-size: 12px; line-height: 18px; padding-bottom: 18px; }
+
+
+/* =============================================================================
+   Override slider.css
+   ========================================================================== */
+
+/*
+ * Adjust width of navigation links depending on how many elements there are
+ */
+
+#slider .navigation a { width: 168px; }
+
+/*
+ * The default height of each panel is 400px. If there is a panel(s) that has lots of content
+ * then the height for all of them should be made to match (ex. 2135px). This ensures that
+ * the display still looks decent with JS turned off
+ */
+
+#slider .scrollContainer .panel { height: 2325px; }

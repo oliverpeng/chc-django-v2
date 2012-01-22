@@ -3,6 +3,11 @@ $(document).ready(function () {
     var $panels = $('#slider .scrollContainer .panel');
     var $container = $('#slider .scrollContainer');
 
+    // $scroll will adjust height dynamically based on contents of panels
+    // so ignore the CSS height set on .panels since that was only to
+    // ensure graceful degradation with JS turned off
+    $panels.css('height', 'auto');
+
     // if false, we'll float all the panels left and fix the width 
     // of the container
     var horizontal = true;
@@ -41,8 +46,8 @@ $(document).ready(function () {
     $('#slider .navigation').find('a').click(selectNav);
 
     // go find the navigation link that has this target and select the nav
-    function trigger(data) {
-        var el = $('#slider .navigation').find('a[href$="' + data.id + '"]').get(0);
+    function trigger(currPanel) {
+        var el = $('#slider .navigation').find('a[href$="' + currPanel.id + '"]').get(0);
         selectNav.call(el);
     }
 
@@ -77,6 +82,12 @@ $(document).ready(function () {
         axis: 'xy',
 
         onAfter: trigger, // our final callback
+
+        // resize $scroll based on contents of the panel we are scrolling to
+        onBefore: function(e, targetElem) {
+            var height = Math.max(400, $(targetElem).outerHeight() );
+            $scroll.css('height', height);
+        },
 
         offset: offset,
 

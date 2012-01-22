@@ -5,14 +5,29 @@
 #slider .navigation a { font-size: 18px; color: #000000; box-shadow: inset 1px 1px 0 #fff; }
 #slider .navigation a.selected { background: #ebebeb; box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
-#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; border: 1px solid #ccc; }
-#slider .scrollContainer .panel { padding: 20px; height: 400px; width: 910px; }
+#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; }
+#slider .scrollContainer .panel { padding: 20px; width: 910px; }
+#slider .panel h3 { font-size: 35px; padding-bottom: 10px; }
+#slider .panel p { font-size: 16px; color: #000000;}
 
 #slider .scrollButtons { position: absolute; top: 260px; cursor: pointer; width: 24px; height: 24px; background: url(/static/img/slider/scroll-btns.png) no-repeat 0 0; }
 #slider .scrollButtons.left { left: -35px; }
 #slider .scrollButtons.right { right: -35px; background-position: 0 -24px;}
 
-/* Styles below to be overridden */
+/* =============================================================================
+   Styles below may need to be overridden
+   ========================================================================== */
+
+/*
+ * Adjust width of navigation links depending on how many elements there are
+ */
+
 #slider .navigation a { width: 215px; }
-.panel h3 { font-size: 35px; padding-bottom: 10px; }
-.panel p { font-size: 16px; color: #000000;}
+
+/*
+ * The default height of each panel is 400px. If there is a panel(s) that has lots of content
+ * then the height for all of them should be made to match (ex. 2135px). This ensures that
+ * the display still looks decent with JS turned off
+ */
+
+#slider .scrollContainer .panel { height: 400px; }
