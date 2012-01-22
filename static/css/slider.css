@@ -1,17 +1,18 @@
 #slider { margin: 0 auto; position: relative; padding-top: 5px; }
 
-#slider .navigation { margin: 0 0 30px; list-style: none; padding: 0; }
+#slider .navigation { margin: 0 0 34px; list-style: none; padding: 0; }
 #slider .navigation li{ display: block; float: left;  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
 #slider .navigation a { font-size: 18px; color: #000000; box-shadow: inset 1px 1px 0 #fff; }
 #slider .navigation a.selected { background: #ebebeb; box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
-#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; border: 1px solid #cccccc; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; border: 1px solid #ccc; }
 #slider .scrollContainer .panel { padding: 20px; height: 400px; width: 910px; }
 
 #slider .scrollButtons { position: absolute; top: 260px; cursor: pointer; width: 24px; height: 24px; background: url(/static/img/slider/scroll-btns.png) no-repeat 0 0; }
 #slider .scrollButtons.left { left: -35px; }
 #slider .scrollButtons.right { right: -35px; background-position: 0 -24px;}
 
-/* Override this */
+/* Styles below to be overridden */
 #slider .navigation a { width: 215px; }
+.panel h3 { font-size: 35px; padding-bottom: 10px; }
 .panel p { font-size: 16px; color: #000000;}
