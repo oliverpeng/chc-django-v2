@@ -3,7 +3,7 @@ strong { color: #000; font-size: 16px; font-weight: normal; }
 .half { float: left; margin-right: 15px; width: 423px; }
 .left { float: left; width: 172px; }
 .right { float: left; width: 242px; }
-.gray { color: #737373; }
+#slider p.gray { color: #737373; }
 
 
 /* =============================================================================

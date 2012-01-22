@@ -2,7 +2,6 @@
     $(document).ready( function() {
         $('.read-more').toggle(
             function() {
-                console.log('hi');
                 $(this)
                     .html('Quick View -')
                     .next('.entry').slideDown().end()
@@ -10,7 +9,6 @@
 
             },
             function() {
-                console.log('bye');
                 $(this)
                     .html('Read More +')
                     .next('.entry').slideUp().end()
