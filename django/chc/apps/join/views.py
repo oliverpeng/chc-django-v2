@@ -112,7 +112,7 @@ def signup(request):
 		else:
 			pass
 	else:
-		form = SignupForm()
+		form = SignupForm(initial={'is_pastor': request.GET.get('pastor', False) })
 
 	c = { 'form': form, 'error_msgs': error_msgs }
 	return render_to_response('join/signup.html', c, context_instance=RequestContext(request))
