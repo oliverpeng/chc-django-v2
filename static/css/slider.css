@@ -8,7 +8,8 @@
 #slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; }
 #slider .scrollContainer .panel { padding: 20px; width: 910px; }
 #slider .panel h3 { font-size: 35px; padding-bottom: 10px; }
-#slider .panel p { font-size: 16px; color: #000000;}
+#slider .panel p { font-size: 16px; color: #000000; margin: 16px 0; }
+#slider .panel p:first-child { margin-top: 0; }
 
 #slider .scrollButtons { position: absolute; top: 260px; cursor: pointer; width: 24px; height: 24px; background: url(/static/img/slider/scroll-btns.png) no-repeat 0 0; }
 #slider .scrollButtons.left { left: -35px; }

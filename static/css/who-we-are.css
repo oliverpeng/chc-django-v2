@@ -1,8 +1,9 @@
+strong { color: #000; font-size: 16px; font-weight: normal; }
+#slider .small li p { color: #737373; font-size: 12px; line-height: 18px; padding-bottom: 18px; margin: 0; }
 .half { float: left; margin-right: 15px; width: 423px; }
 .left { float: left; width: 172px; }
 .right { float: left; width: 242px; }
 .gray { color: #737373; }
-.small li { font-size: 12px; line-height: 18px; padding-bottom: 18px; }
 
 
 /* =============================================================================
