@@ -1,0 +1,8 @@
+#slider .navigation a { width: 168px; } /* set appropriate width to fit all the links */
+#slider .scroll { border: none; height: auto; }
+
+.half { float: left; margin-right: 15px; width: 423px; }
+.left { float: left; width: 172px; }
+.right { float: left; width: 242px; }
+.gray { color: #737373; }
+.small li { font-size: 12px; line-height: 18px; padding-bottom: 18px; }
