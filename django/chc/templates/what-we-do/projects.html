@@ -7,10 +7,23 @@
 <link rel="stylesheet" href="{% get_static_prefix %}css/what-we-do/projects.css">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{{ STATIC_URL }}js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="{{ STATIC_URL }}js/libs/jquery.localscroll-1.2.7-min.js"></script>
+<script>
+$(document).ready( function() {
+    $.localScroll({
+        hash: false
+    });
+    console.log('wtf')
+});
+</script>
+{% endblock %}
+
 {% block nav-what-we-do %}<a class="active" href="{% url what-we-do %}">What We Do</a>{% endblock %}
 
 {% block content %}
-<h2>View Projects By Country:</h2>
+<h2 id="top">View Projects By Country:</h2>
 <p class="clearfix">
     <a href="#haiti"><img src="{{ STATIC_URL }}img/what-we-do/haiti.png" alt="Haiti"></a>
     <a href="#japan"><img src="{{ STATIC_URL }}img/what-we-do/japan.png" alt="Japan"></a>
@@ -355,7 +368,7 @@
 </ol>
 
 </div>
-
+<a href="#top">Back to Top</a>
 
 <h3 id="japan">Japan List of Projects:</h3>
 
@@ -478,6 +491,6 @@
 </ol>
 
 </div>
-
+<a href="#top">Back to Top</a>
 
 {% endblock %}

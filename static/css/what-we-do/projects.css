@@ -1,5 +1,5 @@
 h2 { font-size: 35px; }
-h3 { font-size: 24px; margin: 24px 0 12px; }
+h3 { font-size: 24px; margin: 44px 0 12px; }
 
 img { border: 1px solid #ccc; }
 
@@ -19,3 +19,5 @@ table thead { background-color: #eee; }
 table th { font-weight: normal; }
 table tr:first-child { border-top: 1px solid #ccc; }
 table tr { border-bottom: 1px solid #ccc; }
+
+a[href="#top"] { float: right; font-size: 16px; margin-top: 10px; }
