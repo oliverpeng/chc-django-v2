@@ -5,7 +5,7 @@ def home(request):
 	return render(request, 'home.html')
 
 def what_we_do(request):
-	return render(request, 'what-we-do.html')
+	return render(request, 'what-we-do/index.html')
 
 def who_we_are(request):
 	return render(request, 'who-we-are.html')
