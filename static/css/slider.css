@@ -32,4 +32,4 @@
  */
 
 #slider .scroll { height: 400px; }
-#slider .scrollContainer .panel { height: 360px; }
+#slider .scrollContainer .panel { height: 360px; } /* .scroll height minus any top and bottom padding */
