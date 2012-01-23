@@ -7,7 +7,5 @@ urlpatterns = patterns('chc.apps.join.views',
     url(r'^subscribe/$', 'subscribe', name='join.subscribe'),
     url(r'^subscribe/thankyou$', 'thanks', name='join.subscribe_thanks'),
     url(r'^pray/$', 'pray', name='join.pray'),
-    url(r'^sendprayer/$', 'sendprayer', name='join.sendprayer'),
-    url(r'^chclive/$', 'chclive', name='join.chclive'),
-    url(r'^partner$', 'partner', name='join.partner'),
+    url(r'^moreways/$', 'moreways', name='join.moreways'),
 )

@@ -135,11 +135,6 @@ def thanks(request):
 def pray(request):
 	return render(request, 'join/pray.html')
 
-def sendprayer(request):
-	return render(request, 'join/sendprayer.html')
+def moreways(request):
+	return render(request, 'join/moreways.html')
 
-def chclive(request):
-	return render(request, 'join/chclive.html')
-
-def partner(request):
-	return render(request, 'join/partner.html')

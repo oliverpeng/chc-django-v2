@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Churches Helping Churches - More Ways to Get Involved{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% get_static_prefix %}css/slider.css">
+<link rel="stylesheet" href="{% get_static_prefix %}css/join/moreways.css">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ STATIC_URL }}js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="{{ STATIC_URL }}js/libs/jquery.localscroll-1.2.7-min.js"></script>
+<script src="{{ STATIC_URL }}js/libs/jquery.serialScroll-1.2.2-min.js"></script>
+<script src="{{ STATIC_URL }}js/mylibs/slider.js"></script>
+{% endblock %}
+
+{% block nav-join %}<a class="active" href="{% url join %}">Join</a>{% endblock %}
+
+{% block content %}
+{% get_static_prefix as STATIC_PREFIX %}
+<h2>Want to join the CHC team?</h2>
+
+<div id="slider">
+    <ul class="navigation clearfix">
+      <li><a class="btn-link" href="#send-prayer-book">Send Prayer Book</a></li>
+      <li><a class="btn-link" href="#chc-live">Experience CHC Live</a></li>
+      <li><a class="btn-link" href="#church-partnership">Church Partnership</a></li>
+    </ul>
+    
+    <div class="scroll shadow">
+        <div class="scrollContainer">
+            <article class="panel" id="send-prayer-book">
+                <div>
+                    <h3>Send Prayer Book</h3>
+                    <p>Prayer is the most effective way to help churches after a disaster. Create a custom prayer book with your church or group that will be delivered to a pastor in a crisis area.<br><br>
+
+    For more information, contact us at <a href="mailto:information@churcheshelpingchurches.com">information@churcheshelpingchurches.com</a>.    </p>
+                </div>
+            </article>
+            <article class="panel" id="chc-live">
+                <div>
+                    <h3>Experience CHC Live</h3>
+                    <p>Interested in sharing Churches Helping Churches with your congregation or group?  Allow us to host an evening of fellowship, encouragement and praise that will challenge your community of believers.<br><br>
+
+    For details, please contact David Shin at <a href="mailto:dshin@churcheshelpingchurches.com">dshin@churcheshelpingchurches.com</a>. </p>
+                </div>
+            </article>
+            <article class="panel" id="church-partnership">
+                <div>
+                    <h3>Partner with a Church</h3>
+                    <p>For churches that want to engage deeper, Church-to-Church partnership offers a long-term relationship with a church in crisis that is not just about building projects but about building relationships.<br><br>
+
+                    Find more information download the <a href="" target="_blank">Executive Summary</a> on Church-to-Church partnerships or contact us at <a href="mailto:information@churcheshelpingchurches.com">information@churcheshelpingchurches.com</a>.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
