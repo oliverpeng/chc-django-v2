@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     (r'^join/', include('chc.apps.join.urls')),
     
     url(r'^what_we_do/$', 'chc.views.what_we_do', name='what-we-do'),
+    url(r'^what_we_do/projects/$', 'chc.views.projects', name='what-we-do.projects'),
     url(r'^who_we_are/$', 'chc.views.who_we_are', name='who-we-are'),
     url(r'^churches/$', 'chc.views.churches', name='churches'),
     url(r'^give/$', 'chc.views.give', name='give'),

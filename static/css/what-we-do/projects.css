@@ -1,0 +1,55 @@
+#main {
+    padding-top: 60px;
+}
+article {
+    margin-bottom: 16px;
+    padding: 20px;
+}
+article > div {
+    float: left;
+}
+article h3 {
+    font-size: 35px;
+    line-height: 47px;
+    margin-top: 47px;
+    text-align: center;
+}
+article .q {
+    color: #737373;
+    font-family: "Lucida Sans Unicode",sans-serif;
+    font-size: 18px;
+}
+article .a {
+    color: #000;
+    font-family: "Lucida Sans Unicode",sans-serif;
+    font-size: 14px;
+    line-height: 35px;
+    margin-left: 35px;
+}
+article .asub {
+    color: #737373;
+    font-family: "Lucida Sans Unicode",sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 15px 70px;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 24px;
+    margin: 24px 0 12px;
+}
+/*Table Styles */
+.eeetop {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.fff td {
+    border-bottom: 1px solid #ccc;
+}
+.ffftop {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
