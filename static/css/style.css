@@ -117,7 +117,7 @@ sub { bottom: -0.25em; }
 
 ul, ol { padding: 0; list-style: none; }
 ul.square, ol.square { list-style: none; padding: 0; }
-ul.square li, ol.square li { background: url(/static/img/footer-icons.png) no-repeat 3px -19px; padding-left: 30px; }
+ul.square li, ol.square li { background: url(/static/img/footer-icons.png) no-repeat 13px -195px; padding-left: 30px; }
 dd { margin: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 

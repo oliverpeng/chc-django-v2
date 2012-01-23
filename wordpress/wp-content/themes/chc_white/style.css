@@ -12,9 +12,15 @@ Version: 1
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
 #wp-main { width: 670px; float: left; }
+#wp-main h2 { font-size: 35px; }
+#wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; }
+
 #sidebar { width: 260px; float: right; }
+#sidebar h2 { font-size: 24px; font-family: "Lucida Sans Unicode", sans-serif; letter-spacing: 1px; }
+#sidebar ul li, #sidebar ol li { font-size: 14px; background: url(/static/img/footer-icons.png) no-repeat 0 -194px; padding-left: 15px; margin: 10px 0; }
 
 .post { padding: 12px 20px; margin: 0 0 22px 0; }
+
 
 .excert {  }
 .excerpt a { display: block; float: right; margin-left: 20px; border: 1px solid #cecdcc; }
@@ -42,8 +48,6 @@ footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px
 #searchform {}
 #s {}
 #searchsubmt {}
-
-p { margin: 15px 0; line-height: 21px; font-size: 14px;  }
 
 ol.commentlist {list-style: none;}
 ol.commentlist li {}
