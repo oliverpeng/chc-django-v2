@@ -239,6 +239,8 @@ td { vertical-align: top; }
    Author: Oliver Peng oliverpeng@gmail.com
    ========================================================================== */
 
+html, body { background-color: #fafafa; }
+
 .container, #main { width: 950px; margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 { font-family: NillandRegular; font-weight: normal; color: #000; }
