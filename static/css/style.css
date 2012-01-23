@@ -200,7 +200,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] { cursor
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
 input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-input[type="text"] { border: 1px solid #c2c7c8; padding: 4px 6px; }
+input[type="text"], input[type="search"] { border: 1px solid #c2c7c8; padding: 4px 6px; }
 
 
 /* 
@@ -264,16 +264,19 @@ body > footer, .push { height: 228px; }
 
 body > footer { background: url("/static/img/footer-bg.gif") repeat-x scroll left top; font-size: 12px; }
 body > footer .container { position: relative; height: 228px; }
-body > footer .column { float: left; padding-top: 24px; }
+body > footer .column { float: left; padding-top: 18px; }
 body > footer .column:first { width: 285px; margin-left: 21px; }
 body > footer .column:nth-child(2) { width: 285px; margin-left: 25px; }
-body > footer .column:nth-child(3) { width: 310px; margin-left: 25px; }
-body > footer h4 { margin-bottom: 13px; font-size: 18px; }
+body > footer .column:nth-child(3) { width: 328px; margin-left: 25px; }
+body > footer h4 { margin-bottom: 13px; font-size: 18px; clear: both; line-height: 30px; color: #737373; }
 body > footer .org, footer .adr, footer .tel, footer .email { padding-left: 30px; }
 body > footer .org, footer .tel, footer .email { background: url(/static/img/footer-icons.png) no-repeat 3px 2px; }
 body > footer .tel { background-position: 3px -39px; }
 body > footer .email { background-position: 3px -59px; }
 body > footer .tel, footer .email { display: block; margin-top: 15px; }
+body > footer h4.search { float: left; }
+body > footer #searchform { margin-bottom: 30px; }
+body > footer #searchform input { width: 252px; margin-left: 10px; }
 body > footer ul.connect { padding: 0; list-style: none; }
 body > footer ul.connect li { float: left; margin-right: 9px;}
 body > footer ul.connect li a { display: block; width: 28px; height: 56px; background: url(/static/img/footer-icons.png) no-repeat 0 -83px; }
@@ -282,7 +285,7 @@ body > footer ul.connect li:nth-child(3) a { background-position: -73px -83px; }
 body > footer ul.connect li:nth-child(1) a:hover { background-position: 0 -139px; }
 body > footer ul.connect li:nth-child(2) a:hover { background-position: -36px -139px; }
 body > footer ul.connect li:nth-child(3) a:hover { background-position: -73px -139px; }
-body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; }
+body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; margin: 0; }
 
 
 .btn-link { font-family: NillandRegular; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; color: #898518; }
