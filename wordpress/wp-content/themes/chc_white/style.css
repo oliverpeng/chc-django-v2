@@ -38,7 +38,7 @@ Version: 1
 #wp-main { width: 670px; float: left; }
 #wp-main h1 { font-size: 34px; }
 #wp-main h2 { font-size: 29px; }
-#wp-main h3, h4, h5, h6 { font-size: 24px; margin: 15px 0; }
+#wp-main h3, #wp-main h4, #wp-main h5, #wp-main h6 { font-size: 24px; margin: 15px 0; }
 #wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; }
 
 #sidebar { width: 260px; float: right; }
