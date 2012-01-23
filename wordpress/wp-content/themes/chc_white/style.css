@@ -11,6 +11,30 @@ Version: 1
 
 /* And here begins the Wordpress fun.
 -------------------------------------------------------------------------------*/
+#wp-ads { overflow: hidden; height: 340px; position: relative; }
+#wp-ads .nav { position: absolute; bottom: 10px; right: 0; z-index: 90; padding: 15px 0 15px 15px; }
+#wp-ads .nav a { text-indent: -9999px; display: block; height: 14px; width: 14px; background-color: #ccc; margin-left: 5px; float: left; box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.3); border: 1px solid rgba(0,0,0,0);
+  -webkit-border-radius: 8px; 
+     -moz-border-radius: 8px; 
+          border-radius: 8px;
+;}
+#wp-ads .nav a.activeSlide { background-color: #bdc856; cursor: default; }
+#wp-ads .nav a:hover { border-color: rgba(0, 0, 0, 0.3); }
+#wp-ads .nav a.activeSlide:hover { border-color: rgba(0, 0, 0, 0); }
+#wp-ads .panel { height: 340px; width: 950px; }
+#wp-ads .left { float: left; width: 50%; text-align: center; }
+#wp-ads .reflection  { height: 109px; background: url("/static/img/blog_ads/read-more-btn.png") no-repeat center bottom; }
+#wp-ads .right { float: right; width: 50%; padding-top: 20px; }
+#wp-ads h3 { font-size: 36px; line-height: 1; margin: 19px 0 20px; }
+#wp-ads p { font-size: 17px; color: #000; margin: 0 auto 16px; padding: 0 10px; }
+
+#wp-ads .ad-give h3 { font-size: 44px; margin: 95px 0 20px; }
+#wp-ads .ad-give .reflection  {background-image: url("/static/img/blog_ads/give-btn.png"); }
+#wp-ads .ad-core p { padding: 0 17px; }
+
+
+
+
 #wp-main { width: 670px; float: left; }
 #wp-main h2 { font-size: 35px; }
 #wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; }
