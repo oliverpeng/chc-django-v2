@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% get_static_prefix %}css/what-we-do/projects.css">
 {% endblock %}
 
-{% block nav-what-we-do %}<strong>What We Do</strong>{% endblock %}
+{% block nav-what-we-do %}<a class="active" href="{% url what-we-do %}">What We Do</a>{% endblock %}
 
 {% block content %}
 <h2>View Projects By Country:</h2>
@@ -16,430 +16,468 @@
     <a href="#japan"><img src="{{ STATIC_URL }}img/what-we-do/japan.png" alt="Japan"></a>
 </p>
 
-<a name="haiti"></a>
-<h3>Haiti List of Projects:</h3>
-<article class="shadow">
-    
-    <p class="q">1. <a href="">Churches Helping Churches</a></p>
-    <section>
-        <p class="a">a. Retreats: 1160 pastors trained over 9 retreats</p>
-        <p class="asub">
-        i. Port au Prince (Bolosse)<br>
-        ii. L&eacute;og&acirc;ne<br>
-        iii. Port de Paix<br>
-        iv. La Gonave<br>
-        v. Lascahobas<br>
-        vi. Tabarre<br>
-        vii. Jacmel (with CCHI)<br>
-        viii. Gonaives<br>
-        ix. Petit-Go&acirc;ve
-        </p>
-        
-    </section>
-    
-    <p class="q">2. <a href="">Church Construction</a></p>
-    <section>
-        <p class="a">a. 19 permanent structures</p>
-        <table width="770" class="asub fff" cellspacing="0" cellpadding="1">
-            <tbody>
-                <tr>
-                    <td class="ffftop">Brice Jean Monoeil</td>
-                    <td class="ffftop">Eglise de Dieu en Christ</td>
-                    <td class="ffftop">Lilavois</td>
-                </tr>
-                <tr>
-                    <td>Claude D. Jacquet</td>
-                    <td>Eglise Baptiste du Cote Brillant</td>
-                    <td>Fontamara</td>
-                </tr>                            
-                <tr>
-                    <td>Dieucin Marcelin</td>
-                    <td>Eglise Baptiste Stricte le Tabernacle de Jacmel</td>
-                    <td>Jacmel</td>
-                </tr>
-                <tr>
-                    <td>Deronvil Doucette</td>
-                    <td>Eglise Wesleyenne </td>
-                    <td>Carrefour-Feuille</td>
-                </tr>
-                <tr>
-                    <td>Dirogene Pierre</td>
-                    <td>Eglise Evangelique Baptiste de Delmas 19</td>
-                    <td>Delmas</td>
-                </tr>
-                <tr>
-                    <td>Ernst Joseph</td>
-                    <td>Eglise de Dieu Mission Evangelique de la Derniere Heure</td>
-                    <td>Carrefour</td>
-                </tr>
-                <tr>
-                    <td>Ernst Leroy</td>
-                    <td>Eglise Alliance Chr&eacute;tienne  Independante </td>
-                    <td>Leogane</td>
-                </tr>
-                <tr>
-                    <td>Fanier Justima</td>
-                    <td>Eglise Baptiste Evangelique Morija                                          </td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Henry Marc Francois</td>
-                    <td>Eglise Evangelique de la Grace (Tabernacle I)</td>
-                    <td>Grand-Goave</td>
-                </tr>
-                <tr>
-                    <td>Jaccilien Dorcilus</td>
-                    <td>Eglise de Dieu de Carrefour Vert</td>
-                    <td>Leogane</td>
-                </tr>
-                <tr>
-                    <td>Jean Henri Milien</td>
-                    <td>Eglise Lumiere de Leogane</td>
-                    <td>Leogane</td>
-                </tr>
-                <tr>
-                    <td>Jean Menes Valme</td>
-                    <td>Eglise du Redempteur</td>
-                    <td>Carrefour Feuille</td>
-                </tr>
-                <tr>
-                    <td>Jean St. Cyr</td>
-                    <td>Eglise Compassion du Christ                                                         </td>
-                    <td>Petionville</td>
-                </tr>
-                <tr>
-                    <td>Jules Fritzner Devil</td>
-                    <td>Eglise  Apostolique Bon Berger de Dufort</td>
-                    <td>Dufort/Leogane</td>
-                </tr>
-                <tr>
-                    <td>Kelly Joseph</td>
-                    <td>Eglise Evangelique de l'Arahaie                                                 </td>
-                    <td>Arcahaie</td>
-                </tr>
-                <tr>
-                    <td>Louigens Jean</td>
-                    <td>Eglise Baptiste de Meyotte</td>
-                    <td>Mayotte-Peguy-Ville</td>
-                </tr>
-                <tr>
-                    <td>Mathurin Menard</td>
-                    <td>Eglise Wesleyenne de Leogane</td>
-                    <td>Leogane</td>
-                </tr>
-                <tr>
-                    <td>Vijonet Demero</td>
-                    <td>Eglise de la Bonne Nouvelle</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Wilsor Etienne</td>
-                    <td>Eglise Wesleyenne de Port au Princeette</td>
-                    <td>Grand-Goave</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="a">b. 36 transitional structures donated = $120,000</p>
-        <p class="a">c. 40 churches undergoing repairs = $400,000</p>
-        
-        <table width="770" class="asub fff" cellspacing="0" cellpadding="1">
-            <tbody>
-                <tr>
-                    <td class="ffftop">Alfred Marcellus</td>
-                    <td class="ffftop">Eglise Baptiste Bethel de Duval-Roche</td>
-                    <td class="ffftop">Croix des Bouquets</td>
-                </tr>
-                <tr>
-                    <td>Anthony Poteau</td>
-                    <td>Eglise de Dieu en Christ de Fond Brache</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Arsene Nicolas</td>
-                    <td>Eglise Baptiste Evangelique de Petionville</td>
-                    <td>Petionville</td>
-                </tr>
-                <tr>
-                    <td>Chery Volcy</td>
-                    <td>Eglise Vision Céleste de Dieu de Delmas 4</td>
-                    <td>Delmas</td>
-                </tr>
-                <tr>
-                    <td>Clerzius Liberus</td>
-                    <td>Eglise Evangelique le Rocher D&rsquo;Horeb - Delmas 33</td>
-                    <td>Delmas</td>
-                </tr>
-                <tr>
-                    <td>Daleus Hector</td>
-                    <td>Eglise Baptiste Eben-Ezer de Jacmel</td>
-                    <td>Jacmel</td>
-                </tr>
-                <tr>
-                    <td>Ducange Apoleon</td>
-                    <td>Eglise de Dieu en Christ de Pont Rouge                               </td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Elucien Berthony</td>
-                    <td>Eglise la Foi Apostolique de la rue Tiremasse</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Falaise Jean Wilson</td>
-                    <td>Eglise Baptiste Evangelique Eben-Ezer </td>
-                    <td>Croix de Bouquets</td>
-                </tr>
-                <tr>
-                    <td>Garnel Joseph</td>
-                    <td>Eglise Baptiste Philadephie (Convention Baptiste d'Haiti)</td>
-                    <td>Petit-Goave</td>
-                </tr>
-                <tr>
-                    <td>Gerome Bejulan </td>
-                    <td>First Christian Church of Haiti</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Oberd Tilus</td>
-                    <td>Assembl&eacute;e  chr&eacute;tienne par la Foi de Petit Go&acirc;ve</td>
-                    <td>Petit-Goave</td>
-                </tr>
-                <tr>
-                    <td>Guillaume Cangas</td>
-                    <td>Eglise de Dieu en Christ de Nazon</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Italis Paul</td>
-                    <td>Eglise Baptiste de Corail</td>
-                    <td>Corail</td>
-                </tr>
-                <tr>
-                    <td>Jean Samson Mettelus</td>
-                    <td>Eglise Baptiste Bethesda de Musambe                                </td>
-                    <td>Grand Goave</td>
-                </tr>
-                <tr>
-                    <td>Jerome Bossiere</td>
-                    <td>Eglise de Dieu en Christ de Boutilliers #1</td>
-                    <td>Boutilliers</td>
-                </tr>
-                <tr>
-                    <td>Johny Philippe</td>
-                    <td>Eglise Baptiste Bethel de Merger-Sibert</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Louis Charles Alidieu</td>
-                    <td>Eglise Pelerin de Galilee de Belamy                                      </td>
-                    <td>Bainet</td>
-                </tr>
-                <tr>
-                    <td>Louis Pierre Richard</td>
-                    <td>Eglise Evanelique Baptiste du Calvaire</td>
-                    <td>Jacmel</td>
-                </tr>
-                <tr>
-                    <td>Lucien Antoine</td>
-                    <td>Eglise de Nazareen - La Gonave                                                </td>
-                    <td>La Gonave</td>
-                </tr>
-                <tr>
-                    <td>Lucon Chery</td>
-                    <td>Eglise de Dieu Nouvelle Vision  de Freres</td>
-                    <td>Pernier</td>
-                </tr>
-                <tr>
-                    <td>Luner Etienne</td>
-                    <td>Eglise Methodiste Libre de Saintard</td>
-                    <td>Arcahaie</td>
-                </tr>
-                <tr>
-                    <td>Merisier Saintobert</td>
-                    <td>Baptiste Bethel de Castera                                                        </td>
-                    <td>Gonaives</td>
-                </tr>
-                <tr>
-                    <td>Michelet Guy Adescar</td>
-                    <td>Eglise Bon Berger de Cayes Jacmel</td>
-                    <td>Cayes-Jacmel</td>
-                </tr>
-                <tr>
-                    <td>Remy Michel</td>
-                    <td>Bethesda Eglise Baptiste de Ave Pouplard                          </td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Renes Deciere</td>
-                    <td>Eglise Baptiste Village AFCA de Delmas 33</td>
-                    <td>Delmas</td>
-                </tr>
-                <tr>
-                    <td>Tullus Semira</td>
-                    <td>Assemblee  Baptiste Evangelique de Delmas</td>
-                    <td>Delmas</td>
-                </tr>
-                <tr>
-                    <td>Ulrick Cebea</td>
-                    <td>Eglise de Dieu en Christ </td>
-                    <td>Croix des Bouquets</td>
-                </tr>
-                <tr>
-                    <td>Valdes Napoleon</td>
-                    <td>Maison privee</td>
-                    <td>Leogane</td>
-                </tr>
-                <tr>
-                    <td>Vezel Philistin</td>
-                    <td>Eglise Evangelique Baptiste Espoir </td>
-                    <td>Place Cazeau</td>
-                </tr>
-                <tr>
-                    <td>Wilner Valville</td>
-                    <td>Eglise Baptiste Elim du Fontamara</td>
-                    <td>Port au Prince</td>
-                </tr>
-                <tr>
-                    <td>Wisler Jean Baptiste</td>
-                    <td>Eglise Bon  Samaritain de Sibert                                             </td>
-                    <td>Port au Prince</td>
-                </tr>
-            </tbody>
-        </table>
-        </section>
-        
-        
-        <p class="q">3. <a href="">Resource Recovery</a></p>
-        
-        <section>
-        <p class="a">a. 500 trauma counseling kits distributed to pastors</p>
-        <p class="a">b. 200 solar-powered audio Bibles distributed to churches</p>
-        <p class="a">c. $1.7 million medical aid distributed to churches</p>
-        <p class="a">d. 10-year seminary scholarship awarded</p>
-        </section>
-        
-        <p class="q">4. <a href="">As We Have Opportunity</a></p>
-        
-        <section>
-        <p class="a">a. Church-to-church partnerships</p>
-        <p class="asub">i. The Journey, MO and Baptist Church of Compassion in Petionville<br>
-        <p class="asub">ii. Harvest Bible Chapel Indy West, IN and The Baptist Church of Merger<br>
-        <p class="asub">iii. King Street Church, PA and Wesleyan Church of Carrefour<br>
-        <p class="asub">iv. Living Hope Church, WI and Baptist Evangelical Church of Morija<br>
-        
-        <p class="a">b.  Weekly Radio Prayer Broadcast launched on September 15, 2010</p>
-        <p class="asub">i. For 3 months, prayers posted to <a href="http://churcheshelpingchurches.com">ChurchesHelpingChurches.com</a> were translated and broadcast on live Haitian radio stations during every lunch hour.</p>
-        <p class="a">c. January 12th Memorial Event<p>
-        <p class="asub">i.  Estimated 30,000 attended.<br>
-        ii. The Haitian-led planning committee to hold the event every year going forward (without CHC).<br>
-        iii.    All of the sound equipment purchased for that event has been split into smaller systems and gifted to local churches in Haiti.<br>
-        iv. View pictures from the event <a href="http://www.flickr.com/photos/churcheshelpingchurches/sets/72157625685046551/" rel="nofollow" target="_blank">here</a>.</p>
-    </section>
-</article>
+
+<h3 id="haiti">Haiti List of Projects:</h3>
+
+<div class="shadow">
+
+<ol>
+    <li>Churches Helping Churches
+        <ol>
+            <li>
+                Retreats: 1160 pastors trained over 9 retreats
+                <ol>
+                    <li>Port au Prince (Bolosse)</li>
+                    <li>L&eacute;og&acirc;ne</li>
+                    <li>Port de Paix</li>
+                    <li>La Gonave</li>
+                    <li>Lascahobas</li>
+                    <li>Tabarre</li>
+                    <li>Jacmel (with CCHI)</li>
+                    <li>Gonaives</li>
+                    <li>Petit-Go&acirc;ve</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+    <li>
+        Church Construction
+        <ol>
+            <li>
+                19 permanent structures
+                <table width="770" cellspacing="0" cellpadding="1">
+                    <tbody>
+                        <tr>
+                            <td>Brice Jean Monoeil</td>
+                            <td>Eglise de Dieu en Christ</td>
+                            <td>Lilavois</td>
+                        </tr>
+                        <tr>
+                            <td>Claude D. Jacquet</td>
+                            <td>Eglise Baptiste du Cote Brillant</td>
+                            <td>Fontamara</td>
+                        </tr>                            
+                        <tr>
+                            <td>Dieucin Marcelin</td>
+                            <td>Eglise Baptiste Stricte le Tabernacle de Jacmel</td>
+                            <td>Jacmel</td>
+                        </tr>
+                        <tr>
+                            <td>Deronvil Doucette</td>
+                            <td>Eglise Wesleyenne </td>
+                            <td>Carrefour-Feuille</td>
+                        </tr>
+                        <tr>
+                            <td>Dirogene Pierre</td>
+                            <td>Eglise Evangelique Baptiste de Delmas 19</td>
+                            <td>Delmas</td>
+                        </tr>
+                        <tr>
+                            <td>Ernst Joseph</td>
+                            <td>Eglise de Dieu Mission Evangelique de la Derniere Heure</td>
+                            <td>Carrefour</td>
+                        </tr>
+                        <tr>
+                            <td>Ernst Leroy</td>
+                            <td>Eglise Alliance Chr&eacute;tienne  Independante </td>
+                            <td>Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Fanier Justima</td>
+                            <td>Eglise Baptiste Evangelique Morija</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Henry Marc Francois</td>
+                            <td>Eglise Evangelique de la Grace (Tabernacle I)</td>
+                            <td>Grand-Goave</td>
+                        </tr>
+                        <tr>
+                            <td>Jaccilien Dorcilus</td>
+                            <td>Eglise de Dieu de Carrefour Vert</td>
+                            <td>Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Jean Henri Milien</td>
+                            <td>Eglise Lumiere de Leogane</td>
+                            <td>Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Jean Menes Valme</td>
+                            <td>Eglise du Redempteur</td>
+                            <td>Carrefour Feuille</td>
+                        </tr>
+                        <tr>
+                            <td>Jean St. Cyr</td>
+                            <td>Eglise Compassion du Christ</td>
+                            <td>Petionville</td>
+                        </tr>
+                        <tr>
+                            <td>Jules Fritzner Devil</td>
+                            <td>Eglise  Apostolique Bon Berger de Dufort</td>
+                            <td>Dufort/Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Kelly Joseph</td>
+                            <td>Eglise Evangelique de l'Arahaie</td>
+                            <td>Arcahaie</td>
+                        </tr>
+                        <tr>
+                            <td>Louigens Jean</td>
+                            <td>Eglise Baptiste de Meyotte</td>
+                            <td>Mayotte-Peguy-Ville</td>
+                        </tr>
+                        <tr>
+                            <td>Mathurin Menard</td>
+                            <td>Eglise Wesleyenne de Leogane</td>
+                            <td>Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Vijonet Demero</td>
+                            <td>Eglise de la Bonne Nouvelle</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Wilsor Etienne</td>
+                            <td>Eglise Wesleyenne de Port au Princeette</td>
+                            <td>Grand-Goave</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>36 transitional structures donated = $120,000</li>
+            <li>
+                40 churches undergoing repairs = $400,000
+                <table width="770" class="asub fff" cellspacing="0" cellpadding="1">
+                    <tbody>
+                        <tr>
+                            <td class="ffftop">Alfred Marcellus</td>
+                            <td class="ffftop">Eglise Baptiste Bethel de Duval-Roche</td>
+                            <td class="ffftop">Croix des Bouquets</td>
+                        </tr>
+                        <tr>
+                            <td>Anthony Poteau</td>
+                            <td>Eglise de Dieu en Christ de Fond Brache</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Arsene Nicolas</td>
+                            <td>Eglise Baptiste Evangelique de Petionville</td>
+                            <td>Petionville</td>
+                        </tr>
+                        <tr>
+                            <td>Chery Volcy</td>
+                            <td>Eglise Vision Céleste de Dieu de Delmas 4</td>
+                            <td>Delmas</td>
+                        </tr>
+                        <tr>
+                            <td>Clerzius Liberus</td>
+                            <td>Eglise Evangelique le Rocher D&rsquo;Horeb - Delmas 33</td>
+                            <td>Delmas</td>
+                        </tr>
+                        <tr>
+                            <td>Daleus Hector</td>
+                            <td>Eglise Baptiste Eben-Ezer de Jacmel</td>
+                            <td>Jacmel</td>
+                        </tr>
+                        <tr>
+                            <td>Ducange Apoleon</td>
+                            <td>Eglise de Dieu en Christ de Pont Rouge                               </td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Elucien Berthony</td>
+                            <td>Eglise la Foi Apostolique de la rue Tiremasse</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Falaise Jean Wilson</td>
+                            <td>Eglise Baptiste Evangelique Eben-Ezer </td>
+                            <td>Croix de Bouquets</td>
+                        </tr>
+                        <tr>
+                            <td>Garnel Joseph</td>
+                            <td>Eglise Baptiste Philadephie (Convention Baptiste d'Haiti)</td>
+                            <td>Petit-Goave</td>
+                        </tr>
+                        <tr>
+                            <td>Gerome Bejulan </td>
+                            <td>First Christian Church of Haiti</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Oberd Tilus</td>
+                            <td>Assembl&eacute;e  chr&eacute;tienne par la Foi de Petit Go&acirc;ve</td>
+                            <td>Petit-Goave</td>
+                        </tr>
+                        <tr>
+                            <td>Guillaume Cangas</td>
+                            <td>Eglise de Dieu en Christ de Nazon</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Italis Paul</td>
+                            <td>Eglise Baptiste de Corail</td>
+                            <td>Corail</td>
+                        </tr>
+                        <tr>
+                            <td>Jean Samson Mettelus</td>
+                            <td>Eglise Baptiste Bethesda de Musambe                                </td>
+                            <td>Grand Goave</td>
+                        </tr>
+                        <tr>
+                            <td>Jerome Bossiere</td>
+                            <td>Eglise de Dieu en Christ de Boutilliers #1</td>
+                            <td>Boutilliers</td>
+                        </tr>
+                        <tr>
+                            <td>Johny Philippe</td>
+                            <td>Eglise Baptiste Bethel de Merger-Sibert</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Louis Charles Alidieu</td>
+                            <td>Eglise Pelerin de Galilee de Belamy                                      </td>
+                            <td>Bainet</td>
+                        </tr>
+                        <tr>
+                            <td>Louis Pierre Richard</td>
+                            <td>Eglise Evanelique Baptiste du Calvaire</td>
+                            <td>Jacmel</td>
+                        </tr>
+                        <tr>
+                            <td>Lucien Antoine</td>
+                            <td>Eglise de Nazareen - La Gonave                                                </td>
+                            <td>La Gonave</td>
+                        </tr>
+                        <tr>
+                            <td>Lucon Chery</td>
+                            <td>Eglise de Dieu Nouvelle Vision  de Freres</td>
+                            <td>Pernier</td>
+                        </tr>
+                        <tr>
+                            <td>Luner Etienne</td>
+                            <td>Eglise Methodiste Libre de Saintard</td>
+                            <td>Arcahaie</td>
+                        </tr>
+                        <tr>
+                            <td>Merisier Saintobert</td>
+                            <td>Baptiste Bethel de Castera                                                        </td>
+                            <td>Gonaives</td>
+                        </tr>
+                        <tr>
+                            <td>Michelet Guy Adescar</td>
+                            <td>Eglise Bon Berger de Cayes Jacmel</td>
+                            <td>Cayes-Jacmel</td>
+                        </tr>
+                        <tr>
+                            <td>Remy Michel</td>
+                            <td>Bethesda Eglise Baptiste de Ave Pouplard                          </td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Renes Deciere</td>
+                            <td>Eglise Baptiste Village AFCA de Delmas 33</td>
+                            <td>Delmas</td>
+                        </tr>
+                        <tr>
+                            <td>Tullus Semira</td>
+                            <td>Assemblee  Baptiste Evangelique de Delmas</td>
+                            <td>Delmas</td>
+                        </tr>
+                        <tr>
+                            <td>Ulrick Cebea</td>
+                            <td>Eglise de Dieu en Christ </td>
+                            <td>Croix des Bouquets</td>
+                        </tr>
+                        <tr>
+                            <td>Valdes Napoleon</td>
+                            <td>Maison privee</td>
+                            <td>Leogane</td>
+                        </tr>
+                        <tr>
+                            <td>Vezel Philistin</td>
+                            <td>Eglise Evangelique Baptiste Espoir </td>
+                            <td>Place Cazeau</td>
+                        </tr>
+                        <tr>
+                            <td>Wilner Valville</td>
+                            <td>Eglise Baptiste Elim du Fontamara</td>
+                            <td>Port au Prince</td>
+                        </tr>
+                        <tr>
+                            <td>Wisler Jean Baptiste</td>
+                            <td>Eglise Bon  Samaritain de Sibert                                             </td>
+                            <td>Port au Prince</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ol>
+    </li>
+    <li>
+        Resource Recovery
+        <ol>
+            <li>500 trauma counseling kits distributed to pastors</li>
+            <li>200 solar-powered audio Bibles distributed to churches</li>
+            <li>$1.7 million medical aid distributed to churches</li>
+            <li>10-year seminary scholarship awarded</li>
+        </ol>
+    </li>
+    <li>
+        As We Have Opportunity
+        <ol>
+            <li>
+                Church-to-church partnerships
+                <ol>
+                    <li>The Journey, MO and Baptist Church of Compassion in Petionville</li>
+                    <li>Harvest Bible Chapel Indy West, IN and The Baptist Church of Merger</li>
+                    <li>King Street Church, PA and Wesleyan Church of Carrefour</li>
+                    <li>Living Hope Church, WI and Baptist Evangelical Church of Morija</li>
+                </ol>
+            </li>
+            <li>
+                Weekly Radio Prayer Broadcast launched on September 15, 2010
+                <ol>
+                    <li>For 3 months, prayers posted to <a href="{% url join.pray %}">ChurchesHelpingChurches.com</a> were translated and broadcast on live Haitian radio stations during every lunch hour.</li>
+                </ol>
+            <li>
+                January 12th Memorial Event
+                <ol>
+                    <li>Estimated 30,000 attended.</li>
+                    <li>The Haitian-led planning committee to hold the event every year going forward (without CHC).</li>
+                    <li>All of the sound equipment purchased for that event has been split into smaller systems and gifted to local churches in Haiti.</li>
+                    <li>View pictures from the event <a href="http://www.flickr.com/photos/churcheshelpingchurches/sets/72157625685046551/" rel="nofollow" target="_blank">here</a>.</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+</ol>
+
+</div>
 
 
-<h3><a name="japan"></a>Japan List of Completed Projects:</h3>
-<article class="shadow">
+<h3 id="japan">Japan List of Projects:</h3>
 
-<p class="q">1. <a href="">Churches Helping Pastors </a></p>
+<div class="shadow">
 
-<section>
-<p class="a">a. 6 Retreats in total:</p>
-<p class="asub">1. Iwate – June 2011<br>
-2. Sendai 1 – June 2011<br>
-3. Sendai 2 – September 2011<br>
-4. Sendai 3 – December 2011<br>
-5. Two more scheduled for early 2012</p>
-<p class="a">b. 80 custom made prayer books sent to pastors for encouragement</p>
-</section>
+<ol>
+    <li>Churches Helping Pastors
+        <ol>
+            <li>
+                6 Retreats in total:
+                <ol>
+                    <li>Iwate – June 2011</li>
+                    <li>Sendai 1 – June 2011</li>
+                    <li>Sendai 2 – September 2011</li>
+                    <li>Sendai 3 – December 2011</li>
+                    <li>Two more scheduled for early 2012</li>
+                </ol>
+            </li>
+            <li>80 custom made prayer books sent to pastors for encouragement</li>
+        </ol>
+    </li>
+    <li>
+        Church Construction
+        <ol>
+            <li>
+                Church Relief Grants
+                <table width="770" class="asub fff" cellspacing="0" cellpadding="1">
+                    <thead>
+                        <tr>
+                            <th>Pastor's Name</th>
+                            <th>Church Name</th>
+                            <th>Project Description</th>
+                            <th>Cost (&yen;)</th>
+                            <th>Cost ($)</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">TOTAL</td>
+                            <td> &yen;51,378,406 </td>
+                            <td> $685,046 </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>Masayoshi Nakano</td>
+                            <td>Izumi Bible Baptist Church</td>
+                            <td>Demolition, foundation, new building</td>
+                            <td> &yen;27,000,000 </td>
+                            <td> $360,000 </td>
+                        </tr>
+                        <tr>
+                            <td>Yukikazu Otomo</td>
+                            <td>Shiogama Bible Church</td>
+                            <td>Ministry/volunteer center</td>
+                            <td> &yen;15,000,000 </td>
+                            <td> $200,000 </td>
+                        </tr>
+                        <tr>
+                            <td>Yukikazu Otomo</td>
+                            <td>Shiogama Bible Church</td>
+                            <td>Car replacement</td>
+                            <td> &yen;2,000,000 </td>
+                            <td> $26,667 </td>
+                        </tr>
+                        <tr>
+                            <td>Satoshi Ito</td>
+                            <td>Ishinomaki Christ Church</td>
+                            <td>Operating expenses (1 year)</td>
+                            <td> &yen;2,400,000 </td>
+                            <td> $32,000 </td>
+                        </tr>
+                        <tr>
+                            <td>Satoshi Ito</td>
+                            <td>Sendai Christ Church</td>
+                            <td>Storage for supplies</td>
+                            <td> &yen;500,000 </td>
+                            <td> $6,667 </td>
+                        </tr>
+                        <tr>
+                            <td>Nobuyoshi Nagai</td>
+                            <td>Tohoku Central Church</td>
+                            <td>Plumbing and kitchen</td>
+                            <td> &yen;3,478,406 </td>
+                            <td> $46,379 </td>
+                        </tr>
+                        <tr>
+                            <td>Tokio Tanaka</td>
+                            <td>Miyagi Bible Church</td>
+                            <td>Sanctuary flood repair</td>
+                            <td> &yen;1,000,000 </td>
+                            <td> $13,333 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>36 transitional structures donated = $120,000</li>
+            <li>40 churches undergoing repairs = $400,000</li>
+        </ol>
+    </li>
+    <li>
+        Resource Recovery
+        <ol>
+            <li>
+                Funding for immediate pastors’ needs
+                <ol>
+                    <li>$14,000 in emergency relief aid supplies through CRASH</li>
+                    <li>Rent for two homeless pastors placed in apartments</li>
+                    <li>Bicycles for Pastor Hiroshi Minegishi and wife to continue visiting church members</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+    <li>
+        As We Have Opportunity
+        <ol>
+            <li>Photography equipment donated to CRASH (on ground relief organization)</li>
+        </ol>
+    </li>
+</ol>
 
-<p class="q">2. <a href="">Church Construction</a></p>
-
-<section>
-<p class="a">a. Church Relief Grants</p>
-<table width="770" class="asub fff" cellspacing="0" cellpadding="1">
-      <tbody>
-            <tr>
-                <td class="eeetop">Pastor's Name</td>
-                <td class="eeetop">Church Name</td>
-                <td class="eeetop">Project Description</td>
-                <td class="eeetop">Cost (&yen;)</td>
-                <td class="eeetop">Cost ($)</td>
-            </tr>
-            <tr>
-                <td>Masayoshi Nakano</td>
-                <td>Izumi Bible Baptist Church</td>
-                <td>Demolition, foundation, new building</td>
-                <td> &yen;27,000,000 </td>
-                <td> $360,000 </td>
-            </tr>
-            <tr>
-                <td>Yukikazu Otomo</td>
-                <td>Shiogama Bible Church</td>
-                <td>Ministry/volunteer center</td>
-                <td> &yen;15,000,000 </td>
-                <td> $200,000 </td>
-            </tr>
-            <tr>
-                <td>Yukikazu Otomo</td>
-                <td>Shiogama Bible Church</td>
-                <td>Car replacement</td>
-                <td> &yen;2,000,000 </td>
-                <td> $26,667 </td>
-            </tr>
-            <tr>
-                <td>Satoshi Ito</td>
-                <td>Ishinomaki Christ Church</td>
-                <td>Operating expenses (1 year)</td>
-                <td> &yen;2,400,000 </td>
-                <td> $32,000 </td>
-            </tr>
-            <tr>
-                <td>Satoshi Ito</td>
-                <td>Sendai Christ Church</td>
-                <td>Storage for supplies</td>
-                <td> &yen;500,000 </td>
-                <td> $6,667 </td>
-            </tr>
-            <tr>
-                <td>Nobuyoshi Nagai</td>
-                <td>Tohoku Central Church</td>
-                <td>Plumbing and kitchen</td>
-                <td> &yen;3,478,406 </td>
-                <td> $46,379 </td>
-            </tr>
-            <tr>
-                <td>Tokio Tanaka</td>
-                <td>Miyagi Bible Church</td>
-                <td>Sanctuary flood repair</td>
-                <td> &yen;1,000,000 </td>
-                <td> $13,333 </td>
-            </tr>
-            <tr>
-                <td colspan="3">TOTAL</td>
-                <td> &yen;51,378,406 </td>
-                <td> $685,046 </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
-
-<p class="q">3. <a href="">Resource Recovery</a></p>
-
-<section>
-<p class="a">a. Funding for immediate pastors&rsquo; needs</p>
-<p class="asub">i.  $14,000 in emergency relief aid supplies through CRASH<br>
-ii. Rent for two homeless pastors placed in apartments<br>
-iii.    Bicycles for Pastor Hiroshi Minegishi and wife to continue visiting church members</p>
-</section>
-
-<p class="q">4. <a href="">As We Have Opportunity</a></p>
-
-<section>
-<p class="a">a. Photography equipment donated to CRASH (on ground relief organization)</p>
-</section>
-
-</article>
+</div>
 
 
 {% endblock %}
