@@ -1,3 +1,5 @@
+// code adapted from http://jqueryfordesigners.com/coda-slider-effect/
+
 $(document).ready(function () {
 
     var $panels = $('#slider .scrollContainer .panel');

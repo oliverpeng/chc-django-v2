@@ -18,4 +18,5 @@
  * the display still looks decent with JS turned off
  */
 
-#slider .scrollContainer .panel > div { height: 530px; }
+#slider .scroll { height: 530px; }
+#slider .scrollContainer .panel > div { height: 490px; }

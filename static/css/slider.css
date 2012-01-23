@@ -5,7 +5,7 @@
 #slider .navigation a { font-size: 18px; color: #000000; box-shadow: inset 1px 1px 0 #fff; }
 #slider .navigation a.selected { background: #ebebeb; box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3); }
 
-#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; }
+#slider .scroll { height: 400px; overflow-y: auto; overflow-x: hidden; position: relative; clear: left; background-color: #fff; }
 #slider .scrollContainer .panel { padding: 20px; width: 910px; }
 #slider .panel h3 { font-size: 35px; padding-bottom: 10px; }
 #slider .panel p { font-size: 16px; color: #000000; margin: 16px 0; }
@@ -31,4 +31,5 @@
  * the display still looks decent with JS turned off
  */
 
-#slider .scrollContainer .panel { height: 400px; }
+#slider .scroll { height: 400px; }
+#slider .scrollContainer .panel { height: 360px; }
