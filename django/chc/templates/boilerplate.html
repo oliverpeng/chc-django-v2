@@ -1,4 +1,4 @@
-{# % load media % #}{% load static %}<!doctype html>
+{% load static %}<!doctype html>
 {# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ #}
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -54,7 +54,7 @@
   www.modernizr.com/download/
   {% endcomment %}
   {# modernizr and respond are also only loaded in the head for IE, else they are included in main.js at the end #}
-  <script src="{{ STATIC_PREFIX }}js/libs/modernizr-2.0.6.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/modernizr-2.0.6.min.js"></script>
   <!--[if lt IE 8]>{# % include_media 'head-ie.js' % #}<![endif]-->
   {% endblock %}
   {% block extra_head %}{% endblock %}
