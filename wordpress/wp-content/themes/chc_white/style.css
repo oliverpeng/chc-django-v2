@@ -36,14 +36,16 @@ Version: 1
 
 
 #wp-main { width: 670px; float: left; }
-#wp-main h2 { font-size: 35px; }
+#wp-main h1 { font-size: 34px; }
+#wp-main h2 { font-size: 29px; }
+#wp-main h3, h4, h5, h6 { font-size: 24px; margin: 15px 0; }
 #wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; }
 
 #sidebar { width: 260px; float: right; }
 #sidebar h2 { font-size: 24px; font-family: "Lucida Sans Unicode", sans-serif; letter-spacing: 1px; }
 #sidebar ul li, #sidebar ol li { font-size: 14px; background: url(/static/img/footer-icons.png) no-repeat 0 -194px; padding-left: 15px; margin: 10px 0; }
 
-.post { padding: 12px 20px; margin: 0 0 22px 0; }
+.page, .post { padding: 12px 20px; margin: 0 0 22px 0; }
 
 
 .excert {  }
@@ -63,11 +65,12 @@ footer.meta { border: 1px solid #dadada; border-width: 1px 0 1px 0; padding: 5px
 #sidebar .widget { padding: 17px; margin: 0 0 20px; }
 
 #respond { margin-top: 15px; }
+#respond #commentform > div { margin: 10px 0; }
 #respond #commentform #submit { margin: 10px 0; width: 150px; }
 
-.navgation {}
-.next-posts {}
-.prev-posts {}
+.navigation { margin: 12px 0; }
+.next-posts { float: left; }
+.prev-posts { float: right; }
 
 #searchform {}
 #s {}
