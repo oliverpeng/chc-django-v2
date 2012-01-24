@@ -3,16 +3,23 @@ $(document).ready( function() {
         hash: false
     });
 
-    $('.toplevel')
+    $('.toplevel .toggle')
         .css('cursor', 'pointer')
-        .addClass('collapsed')
         .toggle(
             function() {
-                $(this).removeClass('collapsed').next('ol').slideDown();
+                $(this).parents('.toplevel').addClass('collapsed').next('ol').slideUp();
             },
             function() {
-                $(this).addClass('collapsed').next('ol').slideUp();
+                $(this).parents('.toplevel').removeClass('collapsed').next('ol').slideDown();
             }
-        )
-        .next('ol').hide();
+        );
+
+    $('table tr:has(a)').hover(
+        function() {
+            $(this).addClass('hover');
+        },
+        function() {
+            $(this).removeClass('hover');
+        }
+    );
 });
