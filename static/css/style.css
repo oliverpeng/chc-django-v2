@@ -249,6 +249,7 @@ h1, h2, h3 { font-size: 44px; }
 header { background: url("/static/img/header-bg.gif") repeat-x scroll left top transparent; height: 97px; }
 #logo { float: left; margin-right: 35px; margin-top: 12px; }
 #logo a { background: url("/static/img/logo.png") no-repeat scroll left top transparent; display: block; width: 177px; height: 70px; }
+#logo a:hover { background-position: left bottom; }
 header nav { position: relative; }
 header nav ul { position: absolute; right: 0; }
 header nav li { float: left; }
@@ -300,7 +301,7 @@ body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size:
 .btn-link.big { font-size: 30px; width: 270px; }
 
 .highlight { color: #898518; }
-.shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+.shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); background-color: #fff; }
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
