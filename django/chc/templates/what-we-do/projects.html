@@ -10,14 +10,7 @@
 {% block extra_js %}
 <script src="{{ STATIC_URL }}js/libs/jquery.scrollTo-1.4.2-min.js"></script>
 <script src="{{ STATIC_URL }}js/libs/jquery.localscroll-1.2.7-min.js"></script>
-<script>
-$(document).ready( function() {
-    $.localScroll({
-        hash: false
-    });
-    console.log('wtf')
-});
-</script>
+<script src="{{ STATIC_URL }}js/projects.js"></script>
 {% endblock %}
 
 {% block nav-what-we-do %}<a class="active" href="{% url what-we-do %}">What We Do</a>{% endblock %}
@@ -35,7 +28,8 @@ $(document).ready( function() {
 <div class="shadow">
 
 <ol>
-    <li>Churches Helping Churches
+    <li>
+        <span class="toplevel">Churches Helping Churches</span>
         <ol>
             <li>
                 Retreats: 1160 pastors trained over 9 retreats
@@ -54,7 +48,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        Church Construction
+        <span class="toplevel">Church Construction</span>
         <ol>
             <li>
                 19 permanent structures
@@ -329,7 +323,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        Resource Recovery
+        <span class="toplevel">Resource Recovery</span>
         <ol>
             <li>500 trauma counseling kits distributed to pastors</li>
             <li>200 solar-powered audio Bibles distributed to churches</li>
@@ -338,7 +332,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        As We Have Opportunity
+        <span class="toplevel">As We Have Opportunity</span>
         <ol>
             <li>
                 Church-to-church partnerships
@@ -375,7 +369,8 @@ $(document).ready( function() {
 <div class="shadow">
 
 <ol>
-    <li>Churches Helping Pastors
+    <li>
+        <span class="toplevel">Churches Helping Pastors</span>
         <ol>
             <li>
                 6 Retreats in total:
@@ -391,7 +386,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        Church Construction
+        <span class="toplevel">Church Construction</span>
         <ol>
             <li>
                 Church Relief Grants
@@ -470,7 +465,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        Resource Recovery
+        <span class="toplevel">Resource Recovery</span>
         <ol>
             <li>
                 Funding for immediate pastors’ needs
@@ -483,7 +478,7 @@ $(document).ready( function() {
         </ol>
     </li>
     <li>
-        As We Have Opportunity
+        <span class="toplevel">As We Have Opportunity</span>
         <ol>
             <li>Photography equipment donated to CRASH (on ground relief organization)</li>
         </ol>

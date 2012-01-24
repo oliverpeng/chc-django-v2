@@ -3,10 +3,12 @@ h3 { font-size: 24px; margin: 44px 0 12px; }
 
 img { border: 1px solid #ccc; }
 
-.shadow { padding: 20px; }
+.shadow { padding: 20px 20px 20px 40px; }
 
 ol { list-style-type: decimal; margin-left: 28px; }
 ol li { font-size: 18px; color: #898518; }
+.toplevel { padding-left: 50px; margin-left: -50px; background: url("/static/img/what-we-do/toggle-icon.png") no-repeat scroll 3px 10px transparent; }
+.collapsed { background-position: 3px -30px; }
 
 ol ol { margin-left: 35px; list-style-type: lower-latin; }
 ol ol li { color: #000; font-size: 14px; line-height: 35px; }
