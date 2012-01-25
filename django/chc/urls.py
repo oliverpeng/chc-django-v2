@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^who_we_are/$', 'chc.views.who_we_are', name='who-we-are'),
     url(r'^churches/$', 'chc.views.churches', name='churches'),
     url(r'^give/$', 'chc.views.give', name='give'),
+    url(r'^media/$', 'chc.views.media', name='media'),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

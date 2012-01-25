@@ -18,3 +18,6 @@ def churches(request):
 
 def give(request):
 	return render(request, 'give.html')
+
+def media(request):
+    return render(request, 'media.html')
