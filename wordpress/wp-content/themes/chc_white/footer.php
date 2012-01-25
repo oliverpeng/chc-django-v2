@@ -53,14 +53,11 @@
 <!-- this is where we put our custom functions -->
 <script src="/static/js/libs/jquery.cycle.all.latest.js"></script>
 <script src="/static/js/wp.js"></script>
-
-<!-- Asynchronous google analytics; this is the official snippet.
-	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
 	 
 <script>
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_setAccount', 'UA-20445819-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -70,7 +67,6 @@
   })();
 
 </script>
--->
 	
 </body>
 
