@@ -9,6 +9,10 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# Who to email if a user subscribes that meets any of the following
+# criteria: is a pastor, wants to be contacted, wants to take offering
+SUBSCRIPTION_NOTIFICATIONS = ['oliverpeng@gmail.com', 'dshin@churcheshelpingchurches.com']
+
 try:
     from local_settings import *
 except ImportError:

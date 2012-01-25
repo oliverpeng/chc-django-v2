@@ -57,13 +57,11 @@ def signup(request):
 				city = form.cleaned_data['city']
 				state = form.cleaned_data['state']
 				country = form.cleaned_data['country']
-				email = form.cleaned_data['email']
-				is_pastor = form.cleaned_data['is_pastor']
 				phone = form.cleaned_data['phone']
+				email = form.cleaned_data['email']
 				church_name = form.cleaned_data['church_name']
 				church_website = form.cleaned_data['church_website']
 				is_pastor = form.cleaned_data['is_pastor']
-				contact_me = form.cleaned_data['contact_me']
 				take_offering = form.cleaned_data['take_offering']
 				contact_me = form.cleaned_data['contact_me']
 				receive_updates = form.cleaned_data['receive_updates']
@@ -95,8 +93,9 @@ def signup(request):
 				}
 				MailChimp.list_subscribe(email, merge_vars)
 
-				if is_pastor:
-					MailChimp.email_pastor_subscribed(fname=fname, lname=lname, church_name=church_name,
+				if is_pastor or contact_me or take_offering:
+					MailChimp.email_notify(is_pastor=is_pastor, contact_me=contact_me, 
+						take_offering=take_offering, fname=fname, lname=lname, church_name=church_name,
 						city=city, state=state, country=country, church_website=church_website,
 						phone=phone, email=email)
 				return HttpResponseRedirect( reverse('join.thanks') )
