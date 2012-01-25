@@ -5,6 +5,9 @@ strong { color: #000; font-size: 16px; font-weight: normal; }
 .right { float: left; width: 242px; }
 #slider p.gray { color: #737373; }
 
+#staff img { float: left; clear: left; margin-bottom: 15px;}
+#staff.panel p { float: left; width: 760px; margin: 0 0 20px 20px; font-size: 14px; }
+#staff .person { font-weight: bold; display: block; margin-bottom: 5px; font-size: 16px; }
 
 /* =============================================================================
    Override slider.css
