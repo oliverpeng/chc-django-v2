@@ -1,0 +1,15 @@
+h2 { margin-bottom: 30px; }
+h3 { font-size: 24px; }
+
+#photostream { padding: 15px 12px 5px 12px; width: 916px; height: 106px; margin-top: 20px; }
+#photostream .next, #photostream .prev { display: block; height: 70px; float: left; margin-top: 6px; cursor: pointer; width: 27px; }
+#photostream .next { background: url(/static/img/media/next.png) no-repeat 0 0 transparent; }
+#photostream .prev { background: url(/static/img/media/previous.png) no-repeat 0 0 transparent; }
+#photostream .next.disabled, #photostream .prev.disabled { opacity: 0.3; }
+#photostream .viewport { width: 820px; overflow: hidden; position: relative; height: 81px; float: left; margin: 0 20px; }
+#photostream .ul-container { width: 2670px; position: absolute; top: 0; left: 0; left: -890px; }
+#photostream ul { list-style: none; padding: 0; margin: 0; width: 890px; position: absolute; }
+#photostream li { border: 3px solid #fff; float: left; margin-right: 11px; }
+#photostream li:last-child { margin-right: 0; }
+#photostream li:hover { border-color: #BEB931; }
+#photostream .gallery { clear: both; float: right; margin-right: 50px; margin-top: 6px; width: 27px; height: 19px; display: block; background: url(/static/img/media/gallery.png) no-repeat 0 0 transparent; cursor: pointer; }
