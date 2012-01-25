@@ -39,7 +39,7 @@ Version: 1
 #wp-main h1 { font-size: 34px; }
 #wp-main h2 { font-size: 29px; }
 #wp-main h3, #wp-main h4, #wp-main h5, #wp-main h6 { font-size: 24px; margin: 15px 0; }
-#wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; }
+#wp-main p { margin: 15px 0; line-height: 21px; font-size: 14px; color: #222; }
 
 #sidebar { width: 260px; float: right; }
 #sidebar h2 { font-size: 24px; font-family: "Lucida Sans Unicode", sans-serif; letter-spacing: 1px; }
