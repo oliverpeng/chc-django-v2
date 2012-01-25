@@ -21,21 +21,18 @@
 
   {# Mobile viewport optimized: j.mp/bplateviewport #}
   {% block mobile_viewport_optimization %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {# <meta name="viewport" content="width=device-width, initial-scale=1.0"> #}
   {% endblock %}
 
   {% block favicons %}
-  {% comment %}
-  {# Place favicon.ico and apple-touch-icon.png in the media/images directory: #}
   {# mathiasbynens.be/notes/touch-icons #}
   {# For iPhone 4 with high-resolution Retina display: #}
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% media_url 'images/apple-touch-icon-114x114-precomposed.png' %}">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-114x114-precomposed.png">
   {# For first-generation iPad: #}
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% media_url 'images/apple-touch-icon-72x72-precomposed.png' %}">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-72x72-precomposed.png">
   {# For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: #}
-  <link rel="apple-touch-icon-precomposed" href="{% media_url 'images/apple-touch-icon-precomposed.png' %}">
-  <link rel="shortcut icon" href="{% media_url 'images/favicon.ico' %}">
-  {% endcomment %}
+  <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ STATIC_URL }}img/favicons/favicon.ico">
   {% endblock %}
 
   {% block css %}
