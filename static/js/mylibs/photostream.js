@@ -92,7 +92,26 @@
                 dataType: 'json',
                 success: options.callback
             });
-        };
+        },
+
+        /* Returns page of current image being displayed in Fancybox
+        */
+        _getPageOfFancyBoxImage = function() {
+            // What is URL of image being displayed?
+            var imgSrc = $('.fancybox-image').attr('src');
+            
+            // Grab anchor tag that links to that URL
+            var $thumb = $('a[href="'+imgSrc+'"]');
+            var $ul = $thumb.parents('ul');
+
+            var page = 0;
+            do {
+                $ul = $ul.prev();
+                page++; 
+            } while($ul.length > 0);
+
+            return page;
+        }
         
     /*
      * Public methods 
@@ -158,7 +177,7 @@
             'per_page': IMAGES_PER_FETCH,
             callback: function(json) {
                 if(!json.photos) {
-                    console.log(json.message);
+                    // console.log(json.message);
                     return;
                 }
                 
@@ -183,7 +202,18 @@
                     _currPage = 1;
                 }
                 $photostream.trigger('pageChange');
-                $('#photostream .ul-container a').fancybox();
+                $('#photostream .ul-container a').fancybox({
+                    afterShow: function() {
+                        var currPage = $.flickrLoader.getCurrPage();
+                        var pageOfImage = _getPageOfFancyBoxImage();
+
+                        if( currPage < pageOfImage ) {
+                            $.flickrLoader.nextPage();
+                        } else if ( currPage > pageOfImage ) {
+                            $.flickrLoader.prevPage();
+                        }
+                    }
+                });
             }
         });
     };
