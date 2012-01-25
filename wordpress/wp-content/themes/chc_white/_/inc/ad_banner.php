@@ -3,7 +3,7 @@
     <div class="scrollContainer">
         <section class="panel clearfix ad-give">
             <div class="left">
-                <h3>Together, we can help the church.<br></h3>
+                <h3>Together, we can help churches rebuild.<br></h3>
                 <div class="reflection">
                     <a class="btn-link big" href="/give">Give</a>
                 </div>
