@@ -1,9 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Churches Helping Churches - The Churches{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/churches.css">
+{% endblock %}
+
+{% block extra_js %}
+<script>
+$(document).ready(function() {
+    $('.left, .right')
+        .css('cursor', 'pointer')
+        .click( function() {
+            var href = $(this).find('a').attr('href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+});
+</script>
+{% endblock %}
 
 {% block nav-churches %}<strong>The Churches</strong>{% endblock %}
 
 {% block content %}
-<h1>The Churches</h1>
+<h2 class="first">The Churches</h2>
+
+<div>
+    <iframe src="http://batchgeo.com/map/1a7b41c47524cbbf069ee28edabae988" width="100%" height="500" frameborder="0" style="border:1px solid #aaa;border-radius:10px;overflow:hidden;"></iframe>
+</div>
+
+<h2>Churches Helped</h2>
+
+<div class="shadow clearfix helped">
+    <div class="left">
+        <img src="{{ STATIC_URL }}img/churches/haiti.png">
+        <div class="link-wrapper">
+            <a class="btn-link" href="{% url what-we-do.projects %}#haiti">In Haiti</a>
+        </div>
+    </div>
+    <div class="right">
+        <img src="{{ STATIC_URL }}img/churches/japan.png">
+        <div class="link-wrapper">
+            <a class="btn-link" href="{% url what-we-do.projects %}#japan">In Japan</a>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
