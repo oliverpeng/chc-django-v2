@@ -85,6 +85,11 @@
   {# Javascript files are all concatenacted and compressed #}
   {# to update for production use python manage generatemedia #}
   <script src="{{ STATIC_URL }}js/libs/jquery-1.6.2.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/cufon-yui.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/cufon-fonts/NillandRegular.font.js"></script>
+  <script type="text/javascript">
+      Cufon.replace('h1, h2, h3, h4, h5, h6, #slider .navigation a, .btn-link');
+    </script>
   {% endblock %}
   {% block extra_js %}{% endblock %}
 

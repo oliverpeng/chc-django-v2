@@ -99,17 +99,6 @@ sub { bottom: -0.25em; }
    Web Fonts
    ========================================================================== */
 
-@font-face {
-    font-family: 'NillandRegular';
-    src: url('/static/fonts/nilland/nilland.eot');
-    src: url('/static/fonts/nilland/nilland.eot?#iefix') format('embedded-opentype'),
-         url('/static/fonts/nilland/nilland.woff') format('woff'),
-         url('/static/fonts/nilland/nilland.ttf') format('truetype'),
-         url('/static/fonts/nilland/nilland.svg#NillandRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 /* =============================================================================
    Lists
@@ -243,7 +232,7 @@ html, body { background-color: #fafafa; }
 
 .container, #main { width: 950px; margin: 0 auto; }
 
-h1, h2, h3, h4, h5, h6 { font-family: NillandRegular; font-weight: normal; color: #000; }
+h1, h2, h3, h4, h5, h6 { font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; font-weight: normal; color: #000; }
 h1, h2, h3 { font-size: 44px; }
 
 header { background: url("/static/img/header-bg.gif") repeat-x scroll left top transparent; height: 97px; }
@@ -277,9 +266,9 @@ body > footer .org, footer .tel, footer .email { background: url(/static/img/foo
 body > footer .tel { background-position: 3px -39px; }
 body > footer .email { background-position: 3px -59px; }
 body > footer .tel, footer .email { display: block; margin-top: 15px; }
-body > footer h4.search { float: left; }
+body > footer .search { float: left; }
 body > footer #searchform { margin-bottom: 30px; }
-body > footer #searchform input { width: 252px; margin-left: 10px; }
+body > footer #searchform input { width: 250px; margin-left: 10px; }
 body > footer ul.connect { padding: 0; list-style: none; }
 body > footer ul.connect li { float: left; margin-right: 9px;}
 body > footer ul.connect li a { display: block; width: 28px; height: 56px; background: url(/static/img/footer-icons.png) no-repeat 0 -83px; }
@@ -291,7 +280,7 @@ body > footer ul.connect li:nth-child(3) a:hover { background-position: -73px -1
 body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size: 11px; margin: 0; }
 
 
-.btn-link { font-family: NillandRegular; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; color: #898518; }
+.btn-link { font-family: "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; display: block; padding: 10px; border: 1px solid #cdcccb; cursor: pointer; margin: 0 auto; width: 100px; text-align: center; color: #898518; }
 .btn-link {
   background: #f4f4f4;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfb), color-stop(1, #dddddd));

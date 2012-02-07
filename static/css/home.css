@@ -14,6 +14,6 @@ article div.right { float: right; padding-bottom: 71px; background: url(/static/
 .featured-box .constrain { max-height: 260px; overflow: hidden; }
 .featured-box img { border: 1px solid #ccc; }
 .featured-box h3 { font-size: 24px; margin-top: 5px; }
-.featured-box h4 { font-family: "Lucida Sans Unicode", sans-serif; font-size: 16px; color: #737373; margin: 15px 0 18px; }
+.featured-box p.subtext { font-family: "Lucida Sans Unicode", sans-serif; font-size: 16px; color: #737373; margin: 15px 0 18px; }
 .featured-content { color: #737373; font-size: 12px; }
 .featured-link-wrapper { position: absolute; bottom: 11px; width: 263px; }

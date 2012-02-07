@@ -53,6 +53,11 @@
 <!-- this is where we put our custom functions -->
 <script src="/static/js/libs/jquery.cycle.all.latest.js"></script>
 <script src="/static/js/wp.js"></script>
+<script src="/static/js/libs/cufon-yui.js"></script>
+<script src="/static/js/libs/cufon-fonts/NillandRegular.font.js"></script>
+<script type="text/javascript">
+    Cufon.replace('h1, h2, h3, h4, h5, h6, #slider .navigation a, .btn-link');
+</script>
 	 
 <script>
 
