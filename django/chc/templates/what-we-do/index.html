@@ -13,6 +13,7 @@
 <script src="{{ STATIC_URL }}js/libs/jquery.localscroll-1.2.7-min.js"></script>
 <script src="{{ STATIC_URL }}js/libs/jquery.serialScroll-1.2.2-min.js"></script>
 <script src="{{ STATIC_URL }}js/mylibs/slider.js"></script>
+<script src="{{ STATIC_URL }}js/what-we-do.js"></script>
 {% endblock %}
 
 {% block nav-what-we-do %}<strong>What We Do</strong>{% endblock %}
@@ -34,25 +35,25 @@
         <div class="scrollContainer">
             <article class="panel" id="pastors">
                 <div>
-                    <h3>The best way to start rebuilding a church<br>is to rebuild the pastor.</h3>
+                    <h3><a href="/blog/category/01-churches-helping-pastors/">The best way to start rebuilding a church<br>is to rebuild the pastor.</a></h3>
                     <p>Taking the gospel into grief, CHP is a counseling initiative focused on ministering to and equipping pastors who are both leaders and victims during crisis.</p>
                 </div>
             </article>
             <article class="panel" id="reconstruction">
                 <div>
-                    <h3>The church is not a building.</h3>
+                    <h3><a href="/blog/category/02-church-reconstruction/">The church is not a building.</a></h3>
                     <p>A building allows the people of God to gather without distraction, even during inclement weather.  But our reconstruction projects are about so much more than the building.</p>
                 </div>
             </article>
             <article class="panel" id="recovery">
                 <div>
-                    <h3>Getting the Church back on its feet.</h3>
+                    <h3><a href="/blog/category/03-resource-recovery/">Getting the Church back on its feet.</a></h3>
                     <p>Sometimes all it takes for a ministry to get going again is a small apartment for a pastor or a rental space to meet in or a bicycle to visit community members.</p>
                 </div>
             </article>
             <article class="panel" id="opportunity">
                 <div>
-                    <h3>CHC engages in additional miscellaneous projects that<br>will help the church.</h3>
+                    <h3><a href="{% url what-we-do.projects %}">CHC engages in additional miscellaneous projects that<br>will help the church.</a></h3>
                     <p>Every disaster is unique - As we have opportunity, CHC takes on miscellaneous projects and awards grants that will help the church.  To see a list of projects click on a flag at the bottom of this page.</p>
                 </div>
             </article>
