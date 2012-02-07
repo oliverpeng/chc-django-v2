@@ -6,9 +6,10 @@ img { border: 1px solid #ccc; }
 .shadow { padding: 20px 20px 20px 40px; }
 
 ol { list-style: none; margin-left: 28px; }
-ol li { font-size: 18px; color: #898518; margin-top: 10px; }
-.toplevel { padding-left: 30px; margin-left: -50px; background: url("/static/img/what-we-do/toggle-icon.png") no-repeat scroll 3px 10px transparent; }
-.collapsed { background-position: 3px -30px; }
+ol li { font-size: 14px; color: #000; margin-top: 10px; }
+.toplevel { padding-left: 30px; margin-left: -50px; background: url("/static/img/what-we-do/toggle-icon.png") no-repeat scroll 3px 6px transparent; }
+.toggle { color: #898518; font-size: 18px; }
+.collapsed { background-position: 3px -34px; }
 
 ol ol { margin-left: 10px; list-style: none; }
 ol ol li { color: #000; font-size: 14px; line-height: 20px; margin: 8px 0; }
