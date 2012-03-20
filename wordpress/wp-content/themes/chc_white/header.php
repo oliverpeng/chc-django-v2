@@ -56,7 +56,6 @@
 		      if ($paged>1) {
 		         echo ' - page '. $paged; }
 		   ?>">
-	<meta name="description" content="<?php bloginfo('description'); ?>">
 	
 	<meta name="google-site-verification" content="">
 	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
