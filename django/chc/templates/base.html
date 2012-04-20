@@ -16,12 +16,12 @@
 		<nav>
 			<h2 hidden>Main Navigation</h2>
 			<ul>
-			    <li>{% block nav-join %}<a href="{% url join %}">Join</a>{% endblock %}</li>
+			    <li>{% block nav-join %}<a href="{% url join %}" class="glow-animation">Join</a>{% endblock %}</li>
 			    <li>{% block nav-what-we-do %}<a href="{% url what-we-do %}">What We Do</a>{% endblock %}</li>
 			    <li>{% block nav-who-we-are %}<a href="{% url who-we-are %}">Who We Are</a>{% endblock %}</li>
 			    <li>{% block nav-churches %}<a href="{% url churches %}">The Churches</a>{% endblock %}</li>
 			    <li><a href="/blog">Blog</a></li> {# Blog taken care of by Wordpress #}
-			    <li>{% block nav-give %}<a href="{% url give %}">Give</a>{% endblock %}</li>
+			    <li>{% block nav-give %}<a href="{% url give %}" class="glow-animation">Give</a>{% endblock %}</li>
 			</ul>
 		</nav>
 		{% endblock %}

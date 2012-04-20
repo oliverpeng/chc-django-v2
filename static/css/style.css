@@ -292,6 +292,8 @@ body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size:
 .highlight { color: #898518; }
 .shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); background-color: #fff; }
 
+
+
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
@@ -317,6 +319,16 @@ body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size:
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+
+.glow-animation { 
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
+
+.glow-animation.glow, .glow-animation:hover { text-shadow: 0 0px 2px #8c8c11, 0 0 3px #8c8c11, 0 0 6px #8c8c11; color: #fff; }​
 
 
 /* ==|== media queries ======================================================
