@@ -58,7 +58,7 @@ def email_notify(is_pastor, will_contribute, take_offering, fname, lname, church
 	if is_pastor:
 		alerts.append("I am a pastor")
 	if will_contribute:
-		alerts.append("I would like to contribute monthly.")
+		alerts.append("I would like to contribute regularly.")
 	if take_offering:
 		alerts.append("Our church will take an offering at the next crisis.")
 

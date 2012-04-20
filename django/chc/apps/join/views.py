@@ -74,7 +74,7 @@ def signup(request):
 				if take_offering:
 					groups_705.append('Our church will take an offering at the next crisis.')
 				if will_contribute:
-					groups_705.append('I would like to contribute monthly.')
+					groups_705.append('I would like to contribute regularly.')
 				if receive_updates:
 					groups_705.append('Subscribe to newsletter.')
 				
