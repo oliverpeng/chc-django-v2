@@ -28,8 +28,11 @@ Version: 1
 #wp-ads h3 { font-size: 36px; line-height: 1; margin: 19px 0 20px; }
 #wp-ads p { font-size: 17px; color: #000; margin: 0 auto 16px; padding: 0 10px; }
 
-#wp-ads .ad-give h3 { font-size: 44px; margin: 95px 0 20px; }
-#wp-ads .ad-give .reflection  {background-image: url("/static/img/blog_ads/give-btn.png"); }
+#wp-ads .ad-intro-video .left { padding-top: 50px; }
+#wp-ads .ad-intro-video .btn-link { width: 275px; }
+#wp-ads .ad-intro-video .reflection { background-image: url("/static/img/blog_ads/join-us-btn.png"); }
+#wp-ads .ad-give h3 { font-size: 44px; margin: 65px 0 20px; }
+#wp-ads .ad-give .reflection { background-image: url("/static/img/blog_ads/give-btn.png"); }
 #wp-ads .ad-core p { padding: 0 17px; }
 
 

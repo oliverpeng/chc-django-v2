@@ -1,6 +1,22 @@
 <section id="wp-ads">
     <h2 hidden>Ad Banner</h2>
     <div class="scrollContainer">
+        <section class="panel clearfix ad-intro-video">
+            <div class="left">
+                <h3>We rebuild churches.<br>We are churches.</h3>
+                <div class="reflection">
+                    <a class="btn-link big" href="/join">Will you join us?</a>
+                </div>
+            </div>
+            <div class="right">
+                <object style="height: 390px; width: 640px">
+                    <param name="movie" value="https://www.youtube.com/v/URj1cAfHR0o?version=3&feature=player_embedded&autohide=1&enablejsapi=1&fs=1&rel=0&showinfo=0">
+                    <param name="allowFullScreen" value="true">
+                    <param name="allowScriptAccess" value="always">
+                    <embed id="ytplayer" src="https://www.youtube.com/v/URj1cAfHR0o?version=3&feature=player_embedded&autohide=1&enablejsapi=1&fs=1&rel=0&showinfo=0" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="450" height="254">
+                </object>
+            </div>
+        </section>
         <section class="panel clearfix ad-give">
             <div class="left">
                 <h3>Together, we can help churches rebuild.<br></h3>

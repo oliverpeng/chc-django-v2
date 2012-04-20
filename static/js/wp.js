@@ -17,7 +17,7 @@
     });
 
     // Entire rotating ad banner is clickable
-    $('#wp-ads .scrollContainer > section').click( function() {
+    $('#wp-ads .scrollContainer > section:not(.ad-intro-video)').click( function() {
         var href = $(this).find('a').attr('href');
         if (href) {
             window.location.href = href;
@@ -30,5 +30,19 @@
         timeout: 8000,
         pager:  '#wp-ads .nav',
         speed: 500
-      });
+    });
 })(jQuery);
+
+/* Blog rotating ad. If youtube video is playing, stop rotating ad. */
+function onYouTubePlayerReady(playerId) {
+    ytplayer = document.getElementById("ytplayer");
+    ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+}
+
+function onytplayerStateChange(newState) {
+    if (newState == 1) { // playing video
+        $('#wp-ads .scrollContainer').cycle('pause');
+    } else {
+        $('#wp-ads .scrollContainer').cycle('resume');
+    }
+}
