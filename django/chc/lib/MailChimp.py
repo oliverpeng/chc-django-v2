@@ -46,7 +46,7 @@ def extract_href(err_msg):
 	href = match.group(1) if match else ''
 	return href
 
-def email_notify(is_pastor, contact_me, take_offering, fname, lname, church_name, city, state, country, church_website, phone, email):
+def email_notify(is_pastor, will_contribute, take_offering, fname, lname, church_name, city, state, country, church_website, phone, email):
 	""" Email admin notifying if subscriber meets any of these criteria: is_pastor, contact_me, take_offering
 
 	"""
@@ -57,8 +57,8 @@ def email_notify(is_pastor, contact_me, take_offering, fname, lname, church_name
 	alerts = []
 	if is_pastor:
 		alerts.append("I am a pastor")
-	if contact_me:
-		alerts.append("I am interested. Please contact me.")
+	if will_contribute:
+		alerts.append("I would like to contribute monthly.")
 	if take_offering:
 		alerts.append("Our church will take an offering at the next crisis.")
 

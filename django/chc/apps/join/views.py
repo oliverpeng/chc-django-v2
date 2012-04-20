@@ -63,7 +63,7 @@ def signup(request):
 				church_website = form.cleaned_data['church_website']
 				is_pastor = form.cleaned_data['is_pastor']
 				take_offering = form.cleaned_data['take_offering']
-				contact_me = form.cleaned_data['contact_me']
+				will_contribute = form.cleaned_data['will_contribute']
 				receive_updates = form.cleaned_data['receive_updates']
 
 				groupings = []
@@ -73,8 +73,8 @@ def signup(request):
 				
 				if take_offering:
 					groups_705.append('Our church will take an offering at the next crisis.')
-				if contact_me:
-					groups_705.append('Please contact me.')
+				if will_contribute:
+					groups_705.append('I would like to contribute monthly.')
 				if receive_updates:
 					groups_705.append('Subscribe to newsletter.')
 				
@@ -93,12 +93,17 @@ def signup(request):
 				}
 				MailChimp.list_subscribe(email, merge_vars)
 
-				if is_pastor or contact_me or take_offering:
-					MailChimp.email_notify(is_pastor=is_pastor, contact_me=contact_me, 
+				if is_pastor or will_contribute or take_offering:
+					MailChimp.email_notify(is_pastor=is_pastor, will_contribute=will_contribute, 
 						take_offering=take_offering, fname=fname, lname=lname, church_name=church_name,
 						city=city, state=state, country=country, church_website=church_website,
 						phone=phone, email=email)
-				return HttpResponseRedirect( reverse('join.thanks') )
+				if will_contribute:
+					import urllib
+					donate_url = 'https://donate.churcheshelpingchurches.com/?' + urllib.urlencode({'fname': fname, 'lname': lname, 'email': email, 'phone': phone, 'city': city})
+					return HttpResponseRedirect( donate_url )
+				else:
+					return HttpResponseRedirect( reverse('join.thanks') )
 			except MailChimp.MC_Exception as e:
 				if e.err_code == 214: # User already subscribed
 					request.session['signup.is_duplicate'] = True

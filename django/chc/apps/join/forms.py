@@ -12,7 +12,7 @@ class SignupForm(forms.Form):
     church_name = forms.CharField(required=False, label="Church Name")
     church_website = forms.URLField(required=False, label="Church Website")
     take_offering = forms.BooleanField(required=False, label="I'm on board. Our church will take an offering at the next crisis.")
-    contact_me = forms.BooleanField(required=False, label="I am interested. Please contact me.")
+    will_contribute = forms.BooleanField(required=False, label="I would like to contribute monthly.")
     receive_updates = forms.BooleanField(required=False, label="I would like to receive updates.", initial=True)
 
     def clean(self):
