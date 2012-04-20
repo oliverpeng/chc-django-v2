@@ -41,8 +41,8 @@ function onYouTubePlayerReady(playerId) {
 
 function onytplayerStateChange(newState) {
     if (newState == 1) { // playing video
-        $('#wp-ads .scrollContainer').cycle('pause');
+        jQuery('#wp-ads .scrollContainer').cycle('pause');
     } else {
-        $('#wp-ads .scrollContainer').cycle('resume');
+        jQuery('#wp-ads .scrollContainer').cycle('resume');
     }
 }
