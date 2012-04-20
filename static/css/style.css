@@ -321,11 +321,11 @@ body > footer #copyright { position: absolute; bottom: 7px; right: 0; font-size:
 
 
 .glow-animation { 
-    -webkit-transition: all 3s ease;
-    -moz-transition: all 3s ease;
-    -ms-transition: all 3s ease;
-    -o-transition: all 3s ease;
-    transition: all 3s ease;
+    -webkit-transition: text-shadow 3s ease, color 3s ease;
+    -moz-transition: text-shadow 3s ease, color 3s ease;
+    -ms-transition: text-shadow 3s ease, color 3s ease;
+    -o-transition: text-shadow 3s ease, color 3s ease;
+    transition: text-shadow 3s ease, color 3s ease;
 }
 
 .glow-animation.glow, .glow-animation:hover { text-shadow: 0 0px 2px #8c8c11, 0 0 3px #8c8c11, 0 0 6px #8c8c11; color: #fff; }​
