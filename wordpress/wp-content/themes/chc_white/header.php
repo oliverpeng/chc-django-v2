@@ -94,12 +94,12 @@
 				<nav>
 					<h2 hidden>Main Navigation</h2>
 					<ul>
-					    <li><a href="/join">Join</a></li>
+					    <li><a href="/join" class="glow-animation">Join</a></li>
 					    <li><a href="/what_we_do">What We Do</a></li>
 					    <li><a href="/who_we_are">Who We Are</a></li>
 					    <li><a href="/churches">The Churches</a></li>
 					    <li><a href="/blog" class="active">Blog</a></li>
-					    <li><a href="/give">Give</a></li>
+					    <li><a href="/give" class="glow-animation">Give</a></li>
 					</ul>
 				</nav>
 			</div>

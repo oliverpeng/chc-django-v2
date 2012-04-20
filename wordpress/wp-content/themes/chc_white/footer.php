@@ -52,6 +52,7 @@
 
 <!-- this is where we put our custom functions -->
 <script src="/static/js/libs/jquery.cycle.all.latest.js"></script>
+<script src="/static/js/global.js"></script>
 <script src="/static/js/wp.js"></script>
 <script src="/static/js/libs/cufon-yui.js"></script>
 <script src="/static/js/libs/cufon-fonts/NillandRegular.font.js"></script>

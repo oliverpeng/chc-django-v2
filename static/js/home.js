@@ -14,9 +14,4 @@ $(document).ready(function(){
 	    .bind("loaded", function() {
 	    	$(this).fadeIn();
 	    });
-
-	var glow = $('.glow-animation');
-	setInterval(function(){
-	    glow.hasClass('glow') ? glow.removeClass('glow') : glow.addClass('glow');
-	}, 5000);
 });
