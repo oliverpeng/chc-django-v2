@@ -3,14 +3,13 @@
 article { margin-bottom: 16px; }
 
 article div.left { width: 366px; float: left; }
-article h3 { text-align: center; font-size: 35px; line-height: 47px; margin-top: 47px; }
-article div.left a { display: block; height: 109px; width: 299px; background: url(/static/img/home/join-us-btn.png) no-repeat 0 0; margin: 50px auto 0;}
-article div.left a:hover { background-position: 0 -109px; }
-
+article h3 { font-size: 28px; line-height: 47px; margin-top: 47px; }
 article h3 span { margin-left: 175px; }
 article div.right { float: right; padding-bottom: 71px; background: url(/static/img/home/youtube-reflect.png) no-repeat left bottom; }
 
 #join-btn { display: block; position: relative; padding-left: 38px; margin: 50px auto 0; }
+#pulse { position: absolute; left: 15px; top: 0; }
+
 .featured-box { width: 264px; height: 316px; position: relative; float: left; margin: 0 17px; padding: 11px 12px; }
 .featured-box:last-child { margin-right: 0; }
 .featured-box .constrain { max-height: 270px; overflow: hidden; }
